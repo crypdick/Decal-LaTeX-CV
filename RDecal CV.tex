@@ -1,0 +1,286 @@
+% Richard Boeri Decal's CV.
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+% (c) 2011 Richard Decal <richard.decal-at-ncf.edu> http://flavors.me/richarddecal
+% credit to Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd for the grey boxes
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[empty]{geometry}
+ \renewcommand{\familydefault}{\sfdefault}
+ 
+%%%%%%%%%%%%
+%style stuff
+%%%%%%%%%%%%
+\usepackage[svgnames]{xcolor}
+\definecolor{mygrey}{gray}{0.94}
+
+%\newlength{\outerbordwidth}
+\raggedbottom
+%\raggedright
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{multicol} % for the multiple column'd list
+
+%-----------------------------------------------------------
+%Margin setup
+
+%\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.3in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in} 
+%\setlength{\voffset}{0.1in}
+\setlength{\parindent}{0in}
+\setlength{\itemsep}{0pt}
+
+%make list unindented later
+\usepackage{enumitem}
+
+%compress the lines
+\usepackage{setspace}
+%\setstretch{0.9}
+%\halfspacing
+
+%page numbers and labels
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\cfoot{\bfseries \thepage} % except the center
+\rfoot{Decal CV}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%-----------------------------------------------------------
+%Custom commands
+
+%fancy headings
+
+\newcommand{\resheading}[1]{{\vspace*{.06in} \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textmd{\large \textbf{#1} \vphantom{p\^{E}}}}\end{minipage}}} }
+
+
+%\newcommand{\resheading}[{1}]{     \vspace*{.06in} \colorbox{mygrey} {\begin{minipage} { \textwidth}{\textmd{ {\large #1} } \vphantom{p\^{E}} } \end{minipage}  } }
+
+\newcommand{\ressubheading}[4]{
+        \textbf{#1} \hfill #2\\
+        \textit{#3} \hfill #4 \\}
+
+\renewcommand*\descriptionlabel[1]{\hspace\labelsep\emph{#1 -}}
+
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+
+% symbols like \Telefon, \Mobilefone, \Letter and \Email
+\RequirePackage{marvosym}
+% symbols used 
+\providecommand*{\listitemsymbol}{\Neutral}%{{\fontencoding{U}\fontfamily{ding}\selectfont\tiny\symbol{'102}}}
+\providecommand*{\addresssymbol}{}
+\providecommand*{\mobilesymbol}{\Mobilefone}
+\providecommand*{\phonesymbol}{\Telefon}
+\providecommand*{\faxsymbol}{\FAX}
+\providecommand*{\emailsymbol}{\Letter}
+\providecommand*{\homepagesymbol}{{\Large\ComputerMouse}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Richard Boeri Decal}, Molecular biologist & \emailsymbol  \href{mailto:richard.decal@ncf.edu}{richard.decal@ncf.edu} \\
+\textit{updated \today} & \homepagesymbol \href{www.RichardDecal.com}{www.RichardDecal.com}  \\
+
+ 
+\end{tabular*}
+\\
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \ressubheading{New College of Florida}{Sarasota, FL}{B.A., Chemistry/Biology (Honors)}{Aug. 2007 $\rightarrow$ May 2011}
+    Thesis: ``Ebbs and Glows: Quantifying Small RNA Concentrations in \textit{C. elegans}''\\
+
+    \ressubheading{Harriet L. Wilkes Honors College}{Jupiter, FL}{Early admission in lieu of a high school senior year}{Sep. 2006 $\rightarrow$ May 2007}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Academic Projects \& Employment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \ressubheading{\hypertarget{whalevolunteering}Humpback Whale Census}{James Price Point, Australia}{Kimberley Community Whale Research Project}{Aug. 2012 $\rightarrow$ Oct. 2012}
+    This research was a community-initiated peer-review at the proposed site of the world's second-largest liquefied gas processing plant and port. The oil conglomerate's study claimed few humpback whales migrated past James Price Point. Our \href{http://tinyurl.com/JPP-humpback-whale-survey-2013}{peer-review}'s estimates of the humpback population were an order of magnitude larger, a gross discrepancy.  \\
+
+    \ressubheading{Honors Thesis and Baccalaureate Defense}{Sarasota, FL}{New College of Florida}{Aug. 2010 $\rightarrow$ May 2011}
+   A capstone research project conducted in Dr.\ Katherine Walstrom's lab.  My \hyperlink{thesispub}{thesis} proposes a model for RNA Helicase A function in endogenous \emph{C. elegans} RNAi pathways. My baccalaureate exam was administered by a committee of faculty and consisted of a thesis defense followed by a comprehensive oral exam covering all courses I took at New College.\\
+
+    \ressubheading{Tutorials}{Sarasota, FL}{New College of Florida}{Aug. 2007 $\rightarrow$ May 2011}
+    I created classes using New College's tutorial system, in which students are able to design courses in collaboration with faculty. Highlights: ``Wikipedia: Community, Technology, Society", ``Quantitative RT-PCR", ``Arduino Programming", ``Invasive Species", and ``Organic Lab Research".\\
+
+    \ressubheading{Genomics Outreach for Minorities Project (NSF-REU)}{Seattle, WA}{University of Washington}{May 2010 $\rightarrow$ Aug. 2010}
+    A 12-week project conducted in Dr.\ Leo Pallanck's lab. I helped establish a method to grow, stain, and image primary dopaminergic neural culture from \textit{Drosophila} embryos in order to test whether Parkin and PINK1, proteins involved in Parkinson's disease, are recruited to depolarized mitochondria in dopaminergic neurons. This research was \hyperlink{neuronpub}{published} in \textit{PNAS}.\\
+
+    \ressubheading{Lab Technician}{Sarasota, FL}{New College of Florida Dept. of Natural Sciences}{Feb. 2010 $\rightarrow$ Sep. 2010}
+    Routine duties for the department, including autoclaving and disposing lab waste, preparing and sterilized solutions and agar plates, and preparing lab courses as needed. \\
+
+    \ressubheading{Organic Lab Research Tutorial}{Sarasota, FL}{New College of Florida}{Sep. 2008 $\rightarrow$ Nov. 2009}
+    A continuation of New College graduate Dan Kaplan's thesis research conducted in Dr.\ Paul Scudder's lab. I partially synthesized precursors to a novel high-valent iron-stabilizing macrocycle based on the active site of cytochrome P450.\\% My work was summarized in a paper entitled, ``Towards Synthesis of a Cytochrome P450 Mimic".\\
+
+    \ressubheading{Summer Undergraduate Research Program (NSF-REU)}{Pittsburgh, PA}{Carnegie Mellon University}{May 2009 $\rightarrow$ Aug. 2009}
+    A 10-week project conducted in Dr.\ Brooke McCartney's lab. I determined that APC2, a protein with probable roles in colon cancer tumorogenesis, did not interact with $\beta$-catenin of the Wnt pathway's destruction complex. I determined that a conserved APC2's N-terminal domain was not essential for its proper localization. This research was \hyperlink{carnegiepub}{published} in \textit{Genetics}.\\
+    
+    \ressubheading{Independent Study Project}{Sarasota, FL}{New College of Florida}{Jan. 2009}
+    A 4-week project conducted under the direction of Dr.\ Necmettin Yildirim. Using MATLAB, we modelled biological and chemical systems, particularly oscillating kinetic systems such as the Brusselator.\\ % I presented my work in a seminar entitled, ``Modelling the Dynamics of Life".\\
+
+    \ressubheading{Independent Study Project}{Sarasota, FL}{New College of Florida}{Jan. 2008}
+    A 4-week project under the sponsorship of Dr.\ Elzie McCord. I reviewed chromatographic theory and learned how to operate gas and high-pressure liquid chromatographs. I researched and isolated triclosan, a ubiquitous bactericide and suspect carcinogen.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    %\textbf{Academic}
+    
+
+    
+     \hypertarget{neuronpub} Burman JL, Yu S, Poole AC, \textbf{Decal RB} and Pallanck LJ. ``\href{http://www.pnas.org/content/early/2012/06/12/1120688109}{Analysis of neural subtypes reveals selective mitochondrial dysfunction in dopaminergic neurons from parkin mutants}". \textit{Proc Natl Acad Sci USA.} 2012 Jun 26;109(26):10438-43. \\            
+    
+      \hypertarget{carnegiepub} Kunttas-Tatli E, Zhou M, Zimmerman S, Molinar O, Zhouzheng F, Carter K, Kapur M, Cheatle A, \textbf{Decal R}, McCartney BM. ``\href{http://www.genetics.org/content/190/3/1059.full}{Destruction Complex Function in the Wnt Signaling Pathway of Drosophila Requires Multiple Interactions Between Adenomatous Polyposis Coli 2 and Armadillo}". \textit{Genetics}. 2012 Mar; 190(3):1059-75.\\    
+    
+       \hypertarget{thesispub} \textbf{\textbf{Decal RB}}. ``\href{http://tinyurl.com/RichardDecal-NCF-Thesis}{Ebbs and Glows: Quantifying Small RNA Concentrations in \textit{C. elegans}}". Honors thesis, New College of Florida. May 2011. 108 pages.\\
+       
+        
+    
+    %\textbf{Selected Blog Entries}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Presentations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+%(Accepted and Forthcoming)
+    \textbf{Decal RB}, Burman JB, Pallanck L. ``Is Parkin Recruited to Damaged Mitochondria in Dopaminergic Neurons?" Society for Advancement of Chicanos and Native Americans in Science.  Anaheim, CA. September 2010. Poster.\\
+
+    \textbf{Decal RB}, McCartney BM. ``APC2 Does Not Interact with in the $\beta$-Catenin Destruction Complex". Annual Sigma Xi Conference. The Woodlands, TX. November 2009. Poster.\\
+
+    \textbf{Decal RB}, McCartney BM. ``APC2 Does Not Interact with in the $\beta$-Catenin Destruction Complex". Annual Biomedical Research Conference for Minorities. Phoenix, AZ. November 2009. Poster.\\
+        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \ressubheading{Upward Bound}{Seattle, WA}{University of Washington}{July 2010}
+    Outreach program to educate high school students with low socioeconomic status. I presented a lecture on genetics and Parkinson's disease and performed hands-on demonstrations.\\        
+        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     \textsc{Biology}\vspace*{-15pt}
+        \begin{multicols}{2} \begin{itemize}[leftmargin=0.4cm] 
+        \item Standard biochemical and molecular biology assays
+        \item \textit{C. elegans}, \textit{D. melanogaster}, \textit{E. coli}, and primary neural culture models
+        \item UV-Vis, FT-IR, NMR, and mass spectroscopy
+        \item Protein, RNA, DNA, and organelle purification
+        \item Tissue fixation, immunohistochemistry, and LR White embedding
+        \item Exclusion, ion exchange, affinity, gas, thin-layer, and high-pressure liquid chromatography
+        \item Confocal, fluorescence, light, and phase contrast microscopy
+        \item PCR, RT-qPCR, shotgun and Sanger sequencing, and BLAST
+        \item Marine field collecting
+        \item Organic synthesis
+        \end{itemize}
+        \end{multicols}
+
+    \textsc{Computer}
+        \begin{description}\setlength{\itemsep}{0mm}
+        \item[Operating Systems] Proficient: MS Windows, Mac OS X, iOS, Linux, and Android.
+        \item[Software] Proficient: office suites, image manipulation and analysis software, and other common productivity packages. Novice: PyMol.
+        \item[Programming] Fluent: Bash and \LaTeX. Novice: Python, MySQL, NumPy, MATLAB, and Arduino.% sequence alignment.
+        \end{description}
+        
+    \textsc{Personal}}
+        \begin{description}\setlength{\itemsep}{0mm}
+        \item[Photography] I am proficient at DSLR photography and Adobe image manipulation software (\href{https://plus.google.com/photos/102379214640133460120/albums}{portfolio}).
+        \item[Other] Well-rounded, passionate, and dedicated. Fluent in English and Spanish. Known to dabble in the kitchen. I've played violin, piano, contrabass, and ukulele. Licensed scuba diver.
+        \end{description}
+
+        
+        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \ressubheading{Florida ``First Generation" Scholar {\normalfont(two-time recipient)}}{}{New College of Florida}{Aug. 2009 $\rightarrow$ May 2011}
+    Scholarship for minority students who are the first of their family to pursue higher education.\\
+
+    \ressubheading{Florida ``Bright Futures" Scholar}{}{New College of Florida}{Aug. 2007 $\rightarrow$ May 2011}
+    Florida's merit-based scholarship based on high school performance. Awarded full college tuition. \\
+
+    \ressubheading{Four Winds Silver Scholar}{}{New College of Florida}{Aug. 2007 $\rightarrow$ May 2011}\
+    Merit-based scholarship.\\
+    
+  \ressubheading{Student Recognition Award {\normalfont(two-time recipient)} }{}{New College of Florida} {Apr. 2011}\
+    
+    \ressubheading{Student Research Grant}{}{Dubois-Felsmann Research Endowment}{Nov. 2010}\
+    Grant for honors thesis research. \$400.\\
+    
+    \ressubheading{Student Travel Grant}{}{Dubois-Felsmann Research Endowment}{Sep. 2009}\
+    Grant to present my REU research. \$400.\\
+    
+    \ressubheading{ABRCMS Travel Award}{}{American Society for Microbiology}{Aug. 2009}\
+    Grant to present my REU research. \$800.\\
+    
+    \ressubheading{Honors Scholarship}{}{Harriet L. Wilkes Honors College}{Sep. 2006 $\rightarrow$ May 2007}\
+    Merit-based scholarship.\\
+    
+    \ressubheading{AP Scholar Award}{}{J.P. Taravella High}{Apr. 2006}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Activism}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \begin{description}\setlength{\itemsep}{0mm}
+        \item[2006 $\rightarrow$ Present] I am passionate about the open source philosophy and free culture. I contribute to Wikipedia Commons, Linux, and BOINC amongst others.
+        \item[2012] Full-time land-based spotting, tracking, mapping, and data entry of humpback whale behaviour (\hyperlink{whalevolunteering}{description} above).
+        \item[2008] Full-time volunteer for Common Ground Relief, a non-profit organization providing relief in New Orleans following the Hurricane Katrina disaster. Helped reclaim wetlands, established a community garden, and build a house with Americorps.
+        \item[2006 $\rightarrow$ 2007] Part-time volunteer for North Ridge Medical Center in Oakland Park, FL.  Transported patients, manned the front desk, routed calls, and customer support.
+        \end{description}
+
+
+\end{document}
+
+
+% FUTURE SECTIONS//GRAVEYARD
+
+
+%Trainees
+%Editorial Responsibilities
+%Patents
+
+%%-------Coursework
+%\section{Relevant Coursework}
+%\vspace{-20pt} %space fix
+%\begin{multicols}{2}
+%\begin{my_itemize}
+%\item Biochemistry I \& II with Lab
+%\item Genetics with Lab
+%%\item Classical Genetics Techniques Laboratory
+%%     \item Fundamentals of Applied Genetics
+%\item Cell Biology with Lab
+%\item Organic Chemistry I \& II with Labs
+%\item Inorganic \& Bioinorganic Chemistry
+%\item Thermodynamics of Biomolecular Systems %\& Lab
+%\item Organismic Biology
+%\item Ordinary Differential Equations
+%\item Calculus with Theory % \& ODE
+%\end{my_itemize}
+%\end{multicols}
+%\vspace{-12pt}%space fix
