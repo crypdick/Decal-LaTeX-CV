@@ -1,6 +1,16 @@
 # Decal-LaTeX-CV
 Richard Decal's beautiful CV, written in LaTeX
 
+# Requirements
+xcolor
+tocloft
+enumitem
+framed
+mar­vosym
+
+...and probably a few others that are bundled within Ubuntu's Latex recommended and extas packages.
+
+# Credits
 I created this CV using various LaTeX files I found around the web. Credit goes to:
 
 2002 Matthew Boedicker <mboedick@mboedick.org> http://mboedick.org
