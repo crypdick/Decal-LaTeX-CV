@@ -25,6 +25,7 @@
 \usepackage{tocloft}
 \usepackage{multicol} % for the multiple column'd list
 
+
 %-----------------------------------------------------------
 %Margin setup
 
@@ -38,7 +39,7 @@
 \setlength{\textheight}{9.3in}
 \setlength{\textwidth}{7in}
 \setlength{\topmargin}{-0.3in}
-\setlength{\topskip}{0in} 
+\setlength{\topskip}{0in}
 %\setlength{\voffset}{0.1in}
 \setlength{\parindent}{0in}
 \setlength{\itemsep}{0pt}
@@ -75,11 +76,9 @@
 
 \renewcommand*\descriptionlabel[1]{\hspace\labelsep\emph{#1 -}}
 
-\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
-
 % symbols like \Telefon, \Mobilefone, \Letter and \Email
 \RequirePackage{marvosym}
-% symbols used 
+% symbols used
 \providecommand*{\listitemsymbol}{\Neutral}%{{\fontencoding{U}\fontfamily{ding}\selectfont\tiny\symbol{'102}}}
 \providecommand*{\addresssymbol}{}
 \providecommand*{\mobilesymbol}{\Mobilefone}
@@ -89,12 +88,20 @@
 \providecommand*{\homepagesymbol}{{\Large\ComputerMouse}}
 %-----------------------------------------------------------
 
+        
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,    
+    urlcolor=blue
+}
+    \usepackage[hyphenbreaks]{breakurl}
 
 \begin{document}
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Richard Boeri Decal}, Molecular biologist & \emailsymbol  \href{mailto:richard.decal@ncf.edu}{richard.decal@ncf.edu} \\
-\textit{updated \today} & \homepagesymbol \href{www.RichardDecal.com}{www.RichardDecal.com}  \\
+\textbf{\Large Richard Boeri Decal} & \emailsymbol  \href{mailto:decal@uw.edu}{decal@uw.edu} \\
+\textit{updated \today} & \homepagesymbol \href{https://github.com/isomerase/}{ Github.com/isomerase/}  \\
 
  
 \end{tabular*}
@@ -104,8 +111,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Education}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+    \ressubheading{University of Washington}{Seattle, WA}{Post-baccalaureate researcher.}{Jan. 2015 $\rightarrow$ Now}
+ 
     \ressubheading{New College of Florida}{Sarasota, FL}{B.A., Chemistry/Biology (Honors)}{Aug. 2007 $\rightarrow$ May 2011}
     Thesis: ``Ebbs and Glows: Quantifying Small RNA Concentrations in \textit{C. elegans}''\\
 
@@ -114,10 +122,10 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Academic Projects \& Employment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \ressubheading{\hypertarget{Mosquitogrant}Multisensory Integration in Mosquitos}{Seatle, WA}{University of Washington}{Nov. 2014 $\rightarrow$ Now}
-Post-baccalaureate researcher in Dr.\ Adrienne Fairhall's lab. Studying multisensory integration of mosquitos in tracking turbulent plume odor and thermal plumes. \\
+Researcher in Dr.\ Adrienne Fairhall's lab. Our group is investigating multi-modal sensory integration and decision-making in mosquitos during turbulent odor and thermal plume tracking. We use electrophysiological \& tethered and untethered flight data to create models of decision making.\\
 
  \ressubheading{\hypertarget{whalevolunteering}Humpback Whale Census}{James Price Point, Australia}{Kimberley Community Whale Research Project}{Aug. 2012 $\rightarrow$ Oct. 2012}
     This research was a community-initiated peer-review at the proposed site of the world's second-largest liquefied gas processing plant and port. The oil conglomerate's study claimed few humpback whales migrated past James Price Point. Our \href{http://tinyurl.com/JPP-humpback-whale-survey-2013}{peer-review}'s estimates of the humpback population were an order of magnitude larger, a gross discrepancy.  \\
@@ -148,7 +156,6 @@ Post-baccalaureate researcher in Dr.\ Adrienne Fairhall's lab. Studying multisen
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Publications}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     %\textbf{Academic}
     
@@ -164,7 +171,7 @@ Post-baccalaureate researcher in Dr.\ Adrienne Fairhall's lab. Studying multisen
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Presentations}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
     
 %(Accepted and Forthcoming)
     \textbf{Decal RB}, Burman JB, Pallanck L. ``Is Parkin Recruited to Damaged Mitochondria in Dopaminergic Neurons?" Society for Advancement of Chicanos and Native Americans in Science.  Anaheim, CA. September 2010. Poster.\\
@@ -175,14 +182,14 @@ Post-baccalaureate researcher in Dr.\ Adrienne Fairhall's lab. Studying multisen
         
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Teaching}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
     \ressubheading{Upward Bound}{Seattle, WA}{University of Washington}{July 2010}
     Outreach program to educate high school students with low socioeconomic status. I presented a lecture on genetics and Parkinson's disease and performed hands-on demonstrations.\\        
         
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Skills}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
     \textsc{Computation}
         \begin{description}\setlength{\itemsep}{0mm}
@@ -192,7 +199,7 @@ Post-baccalaureate researcher in Dr.\ Adrienne Fairhall's lab. Studying multisen
         \end{description}
 
      \textsc{Biology}\vspace*{-15pt}
-        \begin{multicols}{2} \begin{itemize}[leftmargin=0.4cm] 
+        \begin{multicols}{2} \begin{itemize}[leftmargin=0.4cm]
         \item Standard biochemical and molecular biology assays
         \item \textit{C. elegans}, \textit{D. melanogaster}, \textit{E. coli}, and primary neural culture models
         \item UV-Vis, FT-IR, NMR, and mass spectroscopy
@@ -216,7 +223,7 @@ Post-baccalaureate researcher in Dr.\ Adrienne Fairhall's lab. Studying multisen
         
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Awards, Grants \& Honors}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
     \ressubheading{Florida ``First Generation" Scholar {\normalfont(two-time recipient)}}{}{New College of Florida}{Aug. 2009 $\rightarrow$ May 2011}
     Scholarship for minority students who are the first of their family to pursue higher education.\\ %TODO NIH
 
@@ -251,13 +258,13 @@ Post-baccalaureate researcher in Dr.\ Adrienne Fairhall's lab. Studying multisen
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Activism}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
         \begin{description}\setlength{\itemsep}{0mm}
         \item[2015] Helped organize a Surveillance Self-Defence for Activists Workshop.
         \item[2014 $\rightarrow$ Present] Part of the \#BlackLivesMatter movement.
         \item[2012] Full-time land-based spotting, tracking, mapping, and data entry of humpback whale behaviour (\hyperlink{whalevolunteering}{description} above).
         \item[2008] Full-time volunteer for Common Ground Relief, a non-profit organization providing relief in New Orleans following the Hurricane Katrina disaster. Helped reclaim wetlands, established a community garden, and build a house with Americorps.
-        \item[2006 $\rightarrow$ Present] I am passionate about the open source philosophy and free culture. I contribute to Wikipedia Commons, Linux, and BOINC amongst others. 
+        \item[2006 $\rightarrow$ Present] I am passionate about the open source philosophy and free culture. I contribute to Wikipedia Commons, Linux, and BOINC amongst others.
         \item[2006 $\rightarrow$ 2007] Part-time volunteer for North Ridge Medical Center in Oakland Park, FL.  Transported patients, manned the front desk, routed calls, and customer support.
         \end{description}
 
