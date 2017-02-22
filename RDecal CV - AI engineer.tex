@@ -100,7 +100,7 @@
 }
     \usepackage[hyphenbreaks]{breakurl}
 
-
+\usepackage{ltablex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -131,22 +131,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{~\faTerminal~ Skills \hfill \small{Novice \OneBar $\cdot$ Intermediate \TwoBar $\cdot$ Proficient \ThreeBar $\cdot$ Master \FourBar }} 
 
-\begin{onehalfspace}
-{\ffmfamily\bfseries{Algorithms }} Regression \OneBar $\cdot$ gradient descent \ThreeBar $\cdot$ cross-validation \OneBar $\cdot$ neural style transfer \ThreeBar \\
- {\ffmfamily\bfseries{Languages }} Python \ThreeBar $\cdot$ Shell scripting  \OneBar $\cdot$ CSS \OneBar\\
-{\ffmfamily\bfseries{Programming }} Pandas  \ThreeBar $\cdot$ Numpy  \ThreeBar $\cdot$ Scikit-learn  \OneBar $\cdot$ Matplotlib  \TwoBar $\cdot$ Git  \TwoBar $\cdot$ Unix CLI  \TwoBar \\
-{\ffmfamily\bfseries{Research }} Former research in the fields of computational neuroscience, biochemistry, genetics, and marine biology. I am co-author on several peer-reviewed scientific publications.\\
-{\ffmfamily\bfseries{Operating Systems }} Linux \ThreeBar $\cdot$ MS Windows \ThreeBar $\cdot$  Mac OS X \ThreeBar $\cdot$ Android \FourBar $\cdot$ iOS \TwoBar \\
-{\ffmfamily\bfseries{Misc. }} Espa\~nol \ThreeBar $\cdot$ English \FourBar $\cdot$ Italian \TwoBar  $\cdot$ Photoshop \& Lightroom \ThreeBar $\cdot$ \LaTeX \TwoBar  $\cdot$ Algorithmic financial trading \OneBar  $\cdot$ ZFS \OneBar $\cdot$ PGP \& Tor \ThreeBar $\cdot$ Building computers \TwoBar 
-\end{onehalfspace}
-
-       % 
+\begin{tabularx}{\textwidth}{p{3.5cm}>{\arraybackslash}X}
+  {\ffmfamily\bfseries{Algorithms}} & Regression \OneBar $\cdot$ gradient descent \ThreeBar $\cdot$ cross-validation \OneBar $\cdot$ \mbox{neural style transfer \ThreeBar} \\
+  {\ffmfamily\bfseries{Languages}} & Python \ThreeBar $\cdot$ Bash  \OneBar $\cdot$ CSS \OneBar \\
+  {\ffmfamily\bfseries{Programming}} & Pandas  \ThreeBar $\cdot$ Numpy  \ThreeBar $\cdot$ Scikit-learn  \OneBar $\cdot$ Matplotlib  \TwoBar $\cdot$ Git \TwoBar $\cdot$ \mbox{Unix CLI \TwoBar} $\cdot$  MySQL \OneBar \\
+  {\ffmfamily\bfseries{OS}} & Linux \ThreeBar $\cdot$ MS Windows \ThreeBar $\cdot$  Mac OS X \ThreeBar $\cdot$ Android \FourBar $\cdot$ iOS \TwoBar \\
+  {\ffmfamily\bfseries{Research }} &  Former research in the fields of computational neuroscience, biochemistry, genetics, and marine biology. I am co-author on several peer-reviewed scientific publications.\\
+  {\ffmfamily\bfseries{Misc.}} & Espa\~nol \ThreeBar $\cdot$ English \FourBar $\cdot$ Italian \TwoBar  $\cdot$ Mandarin \OneBar  $\cdot$ \LaTeX \TwoBar  $\cdot$  Photoshop \& Lightroom \ThreeBar  $\cdot$ Algorithmic financial trading \OneBar  $\cdot$ ZFS \OneBar $\cdot$ PGP \& Tor \ThreeBar $\cdot$ \mbox{Building computers \TwoBar} 
+\end{tabularx}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{~\faCodeFork~ Projects} % \& Employment
+\resheading{~\faCodeFork~ Projects}
 
-{\ffmfamily\bfseries{\href{https://github.com/crypdick/RoboSkeeter}{Roboskeeter }}} Dynamical agent models of mosquito decision-making. Implemented in Python using Numpy, Pandas, Matplotlib, and Scipy.\\
+\begin{tabularx}{\textwidth}{p{3.5cm}>{\arraybackslash}X}
+{\ffmfamily\bfseries{\href{https://github.com/crypdick/RoboSkeeter}{Roboskeeter }}} & Dynamical agent models of mosquito decision-making. Implemented in Python using Numpy, Pandas, Matplotlib, and Scipy.\\
+\end{tabularx}
 
 %
 %\ressubheading{\hypertarget{Mosquitogrant}Multisensory Integration in Mosquitos}{Seatle, WA}{Fairhall Lab, University of Washington}{Oct. 2014 $\rightarrow$ Now}
@@ -202,57 +202,5 @@
 \item Created simulations of mosquito decision-making experiments using SciPy.
 \item Preparing manuscript for peer-review.
 \end{itemize}
-
- %Manuscript I create agent-based dynamical models of mosquito flight behavior and benchmark the models against wind-tunnel behavioral data.\\
-
-%Research Assistant
-
-        
-    
  
 \end{document}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%
- %       \begin{description}\setlength{\itemsep}{0mm}
-  %      \item[2015] Helped organize a Surveillance Self-Defence for Activists Workshop.
-   %     \item[2014 $\rightarrow$ Present] Part of the \#BlackLivesMatter movement.
-    %    \item[2012] Full-time land-based spotting, tracking, mapping, and data entry of humpback whale behaviour (\hyperlink{whalevolunteering}{description} above).
-%        \item[2008] Full-time volunteer for Common Ground Relief, a non-profit organization providing relief in New Orleans following the Hurricane Katrina disaster. Helped reclaim wetlands, established a community garden, and build a house with Americorps.
-%        \item[2006 $\rightarrow$ Present] I am passionate about the open source philosophy and free culture. I contribute to Wikipedia Commons, Linux, and BOINC amongst others.
-%        \item[2006 $\rightarrow$ 2007] Part-time volunteer for North Ridge Medical Center in Oakland Park, FL.  Transported patients, manned the front desk, routed calls, and customer support.
-%        \end{description}
-
-
-
-
-
-% FUTURE SECTIONS//GRAVEYARD
-
-
-%Trainees
-%Editorial Responsibilities
-%Patents
-
-%%-------Coursework
-%\section{Relevant Coursework}
-%\vspace{-20pt} %space fix
-%\begin{multicols}{2}
-%\begin{my_itemize}
-%\item Biochemistry I \& II with Lab
-%\item Genetics with Lab
-%%\item Classical Genetics Techniques Laboratory
-%%     \item Fundamentals of Applied Genetics
-%\item Cell Biology with Lab
-%\item Organic Chemistry I \& II with Labs
-%\item Inorganic \& Bioinorganic Chemistry
-%\item Thermodynamics of Biomolecular Systems %\& Lab
-%\item Organismic Biology
-%\item Ordinary Differential Equations
-%\item Calculus with Theory % \& ODE
-%\end{my_itemize}
-%\end{multicols}
-%\vspace{-12pt}%space fix
