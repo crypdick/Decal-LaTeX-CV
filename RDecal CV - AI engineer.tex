@@ -9,9 +9,6 @@
 
 \documentclass[a4paper,12pt]{article}
 
-% Sans Seriff is the way
-\renewcommand{\familydefault}{\sfdefault}
-
 % for skill bars
 \usepackage{graphicx}
 \setlength{\fboxsep}{3pt}
@@ -25,24 +22,22 @@
 % custom dates
 \usepackage{datetime2}
 
-
-%\newlength{\outerbordwidth}
-\raggedbottom
-%\raggedright
-
-\usepackage{framed}
-\usepackage{tocloft}
-\usepackage{multicol} % for the multiple column'd list
+%
+%%%\newlength{\outerbordwidth}
+%\raggedbottom
+%%\raggedright
+%
+%\usepackage{framed}
+%\usepackage{tocloft}
+%\usepackage{multicol} % for the multiple column'd list
 
 
 %Margin setup
 
-\usepackage{geometry}
-
-%\setlength{\evensidemargin}{-0.25in}
+\usepackage[top=0.5in, bottom=0.5in, left=0.75in, right=0.75in]{geometry}
+%
 \setlength{\headheight}{0in}
 \setlength{\headsep}{0in}
-\setlength{\oddsidemargin}{-0.25in}
 \setlength{\paperheight}{11in}
 \setlength{\paperwidth}{8.5in}
 \setlength{\tabcolsep}{0in}
@@ -50,7 +45,6 @@
 \setlength{\textwidth}{7in}
 \setlength{\topmargin}{-0.3in}
 \setlength{\topskip}{0in}
-%\setlength{\voffset}{0.1in}
 \setlength{\parindent}{0in}
 \setlength{\itemsep}{0pt}
 
@@ -62,8 +56,9 @@
 %\setstretch{0.9}
 %\halfspacing
 
-% fancy font for skills
-\usepackage{fetamont}
+% Helvetica
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
 \usepackage[T1]{fontenc}
 
 % symols
@@ -75,7 +70,7 @@
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}  % gets rid of horizontal rule in header
 \rhead{\textit{updated \Today}}
-\cfoot{\faGithubAlt~\href{https://github.com/crypdick}{crypdick}  $\cdot$ \faLinkedin~\href{https://www.linkedin.com/in/richarddecal/}{richarddecal} $\cdot$ \faStackOverflow~\href{https://stackoverflow.com/users/4212158/crypdick}{crypdick}  $\cdot$ \faHome~\href{http://www.richarddecal.com}{homepage}  \\ \faEnvelope ~\href{mailto:decal@uw.edu}{decal@uw.edu}  $\cdot$ \faPhone~ +1 48448-DECAL $\cdot$ \faMapMarker~St. Petersburg, FL, USA } % except the center \\
+\cfoot{\faGithubAlt~\href{https://github.com/crypdick}{crypdick}  $\cdot$ \faLinkedin~\href{https://www.linkedin.com/in/richarddecal/}{richarddecal} $\cdot$ \faStackOverflow~\href{https://stackoverflow.com/users/4212158/crypdick}{crypdick}  $\cdot$ \faHome~\href{http://www.richarddecal.com}{homepage}  \\ \faEnvelope ~\href{mailto:decal@uw.edu}{decal@uw.edu}  $\cdot$ \faPhone~ +1 48448-DECAL }% $\cdot$ \faMapMarker~St. Petersburg, FL, USA } % except the center \\
 \rfoot{\thepage/\pageref{LastPage}}
 
 %Grey heading bars
@@ -109,35 +104,18 @@
 
 {\Huge Richard Boeri Decal} \\
 
-%\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-%\textbf{\Huge Richard Boeri Decal}%   \\
-
- 
-%\end{tabular*}
-%\\
-%\\
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{~\faGraduationCap~ Education}
-
-    \ressubheading{Artificial Intelligence Engineer Nanodegree}{\href{https://www.udacity.com/nanodegree}{Udacity.com}}{Udacity \& Kaggle}{Jan. 2017 $\rightarrow$ Now}
- 
-    \ressubheading{B.A., Chemistry/Biology (Honors)}{Sarasota, FL}{New College of Florida}{Aug. 2007 $\rightarrow$ May 2011}
-   % Thesis: ``Ebbs and Glows: Quantifying Small RNA Concentrations in \textit{C. elegans}''\\
-
-  %  \ressubheading{Harriet L. Wilkes Honors College}{Jupiter, FL}{Early admission in lieu of a high school senior year}{Sep. 2006 $\rightarrow$ May 2007}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{~\faTerminal~ Skills \hfill \small{Novice \OneBar $\cdot$ Intermediate \TwoBar $\cdot$ Proficient \ThreeBar $\cdot$ Master \FourBar }} 
 
 \begin{tabularx}{\textwidth}{p{3.5cm}>{\arraybackslash}X}
-  {\ffmfamily\bfseries{Algorithms}} & Regression \OneBar $\cdot$ gradient descent \ThreeBar $\cdot$ cross-validation \OneBar $\cdot$ \mbox{neural style transfer \ThreeBar} \\
-  {\ffmfamily\bfseries{Languages}} & Python \ThreeBar $\cdot$ Bash  \OneBar $\cdot$ CSS \OneBar \\
-  {\ffmfamily\bfseries{Programming}} & Pandas  \ThreeBar $\cdot$ Numpy  \ThreeBar $\cdot$ Scikit-learn  \OneBar $\cdot$ Matplotlib  \TwoBar $\cdot$ Git \TwoBar $\cdot$ \mbox{Unix CLI \TwoBar} $\cdot$  MySQL \OneBar \\
-  {\ffmfamily\bfseries{OS}} & Linux \ThreeBar $\cdot$ MS Windows \ThreeBar $\cdot$  Mac OS X \ThreeBar $\cdot$ Android \FourBar $\cdot$ iOS \TwoBar \\
-  {\ffmfamily\bfseries{Research }} &  Former research in the fields of computational neuroscience, biochemistry, genetics, and marine biology. I am co-author on several peer-reviewed scientific publications.\\
-  {\ffmfamily\bfseries{Misc.}} & Espa\~nol \ThreeBar $\cdot$ English \FourBar $\cdot$ Italian \TwoBar  $\cdot$ Mandarin \OneBar  $\cdot$ \LaTeX \TwoBar  $\cdot$  Photoshop \& Lightroom \ThreeBar  $\cdot$ Algorithmic financial trading \OneBar  $\cdot$ ZFS \OneBar $\cdot$ PGP \& Tor \ThreeBar $\cdot$ \mbox{Building computers \TwoBar} 
+  \bfseries{Algorithms} & Regression \OneBar $\cdot$ gradient descent \ThreeBar $\cdot$ cross-validation \OneBar $\cdot$ \mbox{neural style transfer \ThreeBar} \\
+  \bfseries{Languages} & Python \ThreeBar $\cdot$ Bash  \OneBar $\cdot$ CSS \OneBar \\
+  \bfseries{Coding} & Machine learning \TwoBar $\cdot$ Pandas  \ThreeBar $\cdot$ Numpy  \ThreeBar $\cdot$ Scikit-learn  \OneBar $\cdot$ \mbox{Matplotlib  \TwoBar} $\cdot$ Git \TwoBar $\cdot$ \mbox{Unix CLI \TwoBar} $\cdot$  MySQL \OneBar \\
+  \bfseries{OS} & Linux \ThreeBar $\cdot$ MS Windows \ThreeBar $\cdot$  Mac OS X \ThreeBar $\cdot$ Android \FourBar $\cdot$ iOS \TwoBar \\
+  \bfseries{Research} &  Former research in the fields of computational neuroscience, biochemistry, genetics, and marine biology. I am co-author on several peer-reviewed scientific publications.\\
+  \bfseries{Misc.} & Espa\~nol \ThreeBar $\cdot$ English \FourBar $\cdot$ Italian \TwoBar  $\cdot$ Mandarin \OneBar  $\cdot$ Technical writing \TwoBar  $\cdot$  Photoshop \& Lightroom \ThreeBar  $\cdot$ Algorithmic financial trading \OneBar $\cdot$ \mbox{Building computers \TwoBar} \\ 
+  \bfseries{Passions \faHeart} & Travel, teaching, learning, social justice, climate change, machine learning, ++  \\
 \end{tabularx}
 
 
@@ -145,7 +123,7 @@
 \resheading{~\faCodeFork~ Projects}
 
 \begin{tabularx}{\textwidth}{p{3.5cm}>{\arraybackslash}X}
-{\ffmfamily\bfseries{\href{https://github.com/crypdick/RoboSkeeter}{Roboskeeter }}} & Dynamical agent models of mosquito decision-making. Implemented in Python using Numpy, Pandas, Matplotlib, and Scipy.\\
+\bfseries{\href{https://github.com/crypdick/RoboSkeeter}{Roboskeeter }} & Dynamical agent models of mosquito decision-making. Coded in Python using Numpy, Pandas, Matplotlib, and Scipy.
 \end{tabularx}
 
 %
@@ -199,9 +177,19 @@
 
 \ressubheading{Research Assistant}{Seatle, WA}{Fairhall Lab, Dept. of Biophysics, Uni. of Washington}{Oct. 2014 $\rightarrow$ Jan. 2016}
 \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, nolistsep]
-\item Processed data and created simulations using Python computing and visualization packages.
-\item Learned foundational concepts in neuronal dynamics which are applicable to artificial deep neural networks.
-\item Preparing manuscript for peer-review.
+\item Processed data, coded \& debugged simulations using Python computing and visualization packages.
+\item Learned foundational concepts in neuronal dynamics which are applicable to coding artificial deep neural networks and machine learning algorithms.
+\item Preparing manuscript for peer-review with my collaborators.\\
 \end{itemize}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{~\faGraduationCap~ Education}
+
+    \ressubheading{Artificial Intelligence Engineer Nanodegree}{\href{https://www.udacity.com/nanodegree}{Udacity.com}}{Udacity \& Kaggle}{}%{Jan. 2017 $\rightarrow$ Now}
+ 
+    \ressubheading{B.A., Chemistry/Biology (Honors)}{Sarasota, FL}{New College of Florida}{}%{Aug. 2007 $\rightarrow$ May 2011} % removed as recommended in https://www.themuse.com/advice/45-quick-changes-that-help-your-resume-get-noticed-2
+   % Thesis: ``Ebbs and Glows: Quantifying Small RNA Concentrations in \textit{C. elegans}''\\
+
+  %  \ressubheading{Harriet L. Wilkes Honors College}{Jupiter, FL}{Early admission in lieu of a high school senior year}{Sep. 2006 $\rightarrow$ May 2007} 
  
 \end{document}
