@@ -1,60 +1,53 @@
 % Richard Boeri Decal's CV.
-% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
-% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
-% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
-% (c) 2011 Richard Decal <richard.decal-at-ncf.edu> http://www.richarddecal.com
-% credit to Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd for the grey boxes
+% (c) 2017 Richard Decal <decal-at-uw.edu> http://www.richarddecal.com
 %
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
 
 \documentclass[a4paper,12pt]{article}
-
-% for skill bars
-\usepackage{graphicx}
-\setlength{\fboxsep}{3pt}
-\setlength{\fboxrule}{0pt}
-\newcommand*{\OneBar}{\fbox{\includegraphics[scale=1.8]{bars1.png}~}}
-\newcommand*{\TwoBar}{\fbox{\includegraphics[scale=1.8]{bars2.png}~}}
-\newcommand*{\ThreeBar}{\fbox{\includegraphics[scale=1.8]{bars3.png}~}}
-\newcommand*{\FourBar}{\fbox{\includegraphics[scale=0.1]{bars4.png}}}
-
+% for doing basic math on widths e.x. \textwidth-1cm
+\usepackage{calc}% http://ctan.org/pkg/calc
 
 % custom dates
 \usepackage{datetime2}
-
-%
-%%%\newlength{\outerbordwidth}
-%\raggedbottom
-%%\raggedright
-%
-%\usepackage{framed}
-%\usepackage{tocloft}
-%\usepackage{multicol} % for the multiple column'd list
-
-
-%Margin setup
-
-\usepackage[top=0.5in, bottom=0.5in, left=0.75in, right=0.75in]{geometry}
-%
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\paperheight}{11in}
-\setlength{\paperwidth}{8.5in}
-\setlength{\tabcolsep}{0in}
-\setlength{\textheight}{9.3in}
-\setlength{\textwidth}{7in}
-\setlength{\topmargin}{-0.3in}
-\setlength{\topskip}{0in}
-\setlength{\parindent}{0in}
-\setlength{\itemsep}{0pt}
-
-% unindented lists
-\usepackage{enumitem}
 
 % compress line spacing
 \usepackage{setspace}
 %\setstretch{0.9}
 %\halfspacing
+
+% unindented lists
+\usepackage{enumitem}
+
+%%%%%%%%%%%%% STYLE STUFF
+
+%Margin setup
+\usepackage[
+  height=9in,      % height of the text block
+  width=7in,       % width of the text block
+  top=90pt,        % distance of the text block from the top of the page
+  headheight=48pt, % height for the header block
+  headsep=12pt,    % distance from the header block to the text block
+  heightrounded,   % ensure an integer number of lines
+ % showframe,       % show the main blocks
+  verbose,         % show the values of the parameters in the log file
+]{geometry}
+
+\setlength{\parindent}{0in}  % gray boxes span the text width
+
+%\usepackage[top=0.5in, bottom=0.5in, left=0.75in, right=0.75in]{geometry}
+%%
+%\setlength{\headheight}{71pt}
+%\setlength{\headsep}{0in}
+%\setlength{\paperheight}{11in}
+%\setlength{\paperwidth}{8.5in}
+%\setlength{\tabcolsep}{0in}
+%\setlength{\textheight}{\paperheight-\headheight}
+%\setlength{\textwidth}{7in}
+%\setlength{\topmargin}{0in}
+%\setlength{\topskip}{0in}
+
+%\setlength{\itemsep}{0pt}
+%%\vspace*{1in} 
 
 % Helvetica
 \usepackage[scaled]{helvet}
@@ -64,16 +57,18 @@
 % symols
 \usepackage{fontawesome}
 
-%% the footer
+%% the header + footer
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}  % gets rid of horizontal rule in header
-\rhead{\textit{updated \Today}}
-\cfoot{\faGithubAlt~\href{https://github.com/crypdick}{crypdick}  $\cdot$ \faLinkedin~\href{https://www.linkedin.com/in/richarddecal/}{richarddecal} $\cdot$ \faStackOverflow~\href{https://stackoverflow.com/users/4212158/crypdick}{crypdick}  $\cdot$ \faHome~\href{http://www.richarddecal.com}{homepage}  \\ \faEnvelope ~\href{mailto:decal@uw.edu}{decal@uw.edu}  $\cdot$ \faPhone~ +1 48448-DECAL }% $\cdot$ \faMapMarker~St. Petersburg, FL, USA } % except the center \\
-%\rfoot{\thepage/\pageref{LastPage}}
+\lhead{\faMapMarker~St. Petersburg, FL, USA \\ \faEnvelope ~\href{mailto:decal@uw.edu}{decal@uw.edu}  \\ \faPhone~ +1 48448-DECAL \\ } % skipped 4th
+\rhead{\faGithubAlt~\href{https://github.com/crypdick}{crypdick}  \\ \faLinkedin~\href{https://www.linkedin.com/in/richarddecal/}{richarddecal} \\ \faStackOverflow~\href{https://stackoverflow.com/users/4212158/crypdick}{crypdick}  \\ \faHome~\href{http://www.richarddecal.com}{homepage}}
+\chead{{\Huge Richard \\ Decal} \\ Artificial Intelligence Engineer}
+\cfoot{\textit{updated \Today}}
 
 %Grey heading bars
+% credit to Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
 \usepackage[svgnames]{xcolor}
 \definecolor{mygrey}{gray}{0.94}
 \newcommand{\resheading}[1]{{\vspace*{.06in} \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textmd{\large \textbf{#1} \vphantom{p\^{E}}}}\end{minipage}}} }
@@ -83,8 +78,6 @@
         \textbf{#1} \hfill #2\\
         \textit{#3} \hfill #4 \\}
 
-%\renewcommand*\descriptionlabel[1]{\hspace\labelsep\emph{#1 -}}
-
 % colored hyperlinks
 \usepackage{hyperref}
 \hypersetup{
@@ -93,37 +86,50 @@
     urlcolor=cyan,
     breaklinks=true
 }
-    \usepackage[hyphenbreaks]{breakurl}
+%\usepackage[hyphenbreaks]{breakurl}
 
+% provides tabularx
 \usepackage{ltablex}
+
+% lists in tables http://tex.stackexchange.com/a/150650/100323
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-{\Huge Richard Boeri Decal} \\  %TODO: make nicer
+%{ Richard Boeri Decal} \\  %TODO: make nicer
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{~\faTerminal~ Skills \hfill \small{Novice \OneBar $\cdot$ Intermediate \TwoBar $\cdot$ Proficient \ThreeBar $\cdot$ Master \FourBar }} 
+\resheading{~\faTerminal~ Skills \hfill \faStar~ denotes proficiency}
 
-\begin{tabularx}{\textwidth}{p{3.5cm}>{\arraybackslash}X}
-  \bfseries{Algorithms} & Regression \OneBar $\cdot$ Gradient descent \ThreeBar $\cdot$ Cross-validation \OneBar $\cdot$ \mbox{Neural style transfer \ThreeBar} \\
-  \bfseries{Languages} & Python \ThreeBar $\cdot$ Bash  \OneBar $\cdot$ CSS \OneBar \\
-  \bfseries{Coding} & Machine learning \TwoBar $\cdot$ Pandas  \ThreeBar $\cdot$ Numpy  \ThreeBar $\cdot$ Scikit-learn  \OneBar $\cdot$ \mbox{Matplotlib  \TwoBar} $\cdot$ Git \TwoBar $\cdot$ \mbox{Unix CLI \TwoBar} $\cdot$  MySQL \OneBar \\
-  \bfseries{OS} & Linux \ThreeBar $\cdot$ MS Windows \ThreeBar $\cdot$  Mac OS X \ThreeBar $\cdot$ Android \FourBar $\cdot$ iOS \TwoBar \\
+\begin{tabularx}{\textwidth}{p{3.1cm}>{\arraybackslash}X}
+  \bfseries{Algorithms} & Regression  $\cdot$ Gradient descent \faStar $\cdot$ Cross-validation  $\cdot$ \mbox{Neural style transfer \faStar} \\
+  \bfseries{Languages} & Python \faStar  \\
+  \bfseries{Coding} & Machine learning  $\cdot$ Pandas  \faStar $\cdot$ Numpy  \faStar $\cdot$ Scikit-learn   $\cdot$ \mbox{Matplotlib  } $\cdot$ Git \faStar $\cdot$ \mbox{Unix CLI }  \\
+  %\bfseries{OS} & Linux \faStar $\cdot$ MS Windows \faStar $\cdot$  Mac OS X \faStar $\cdot$ Android \faStar $\cdot$ iOS  \\
   \bfseries{Research} &  Experienced in computational neuroscience, biochemistry, genetics, and marine biology research. I am co-author on several peer-reviewed scientific publications.\\
-  \bfseries{Misc.} & Espa\~nol \ThreeBar $\cdot$ English \FourBar $\cdot$ Italian \TwoBar  $\cdot$ Mandarin \OneBar  $\cdot$ Technical writing \TwoBar  $\cdot$  Photoshop \& Lightroom \ThreeBar  $\cdot$ Algorithmic trading \OneBar \\  % Web data scraping USA/EU Dual-citizen
+  \bfseries{Misc.} & Espa\~nol \faStar $\cdot$ English \faStar $\cdot$ Italian  $\cdot$ Technical writing  \\  % Web data scraping USA/EU Dual-citizen
   \bfseries{Passions \faHeart} & Travel, teaching, learning, social justice, climate change, my tiny home, ++  \\
 \end{tabularx}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{~\faCodeFork~ Projects}
+%The first bullet point tells the reader the goal/purpose of the project.
+%The second bullet point tells the reader your specific contribution to the project. For example, what technologies you used to accomplish certain aspects of the project.
+%The third bullet point tells the reader the tangible impact your project had.
 
-\begin{tabularx}{\textwidth}{p{3.5cm}>{\arraybackslash}X}
-\bfseries{\href{https://github.com/crypdick/RoboSkeeter}{Roboskeeter}} & Created models of mosquito decision-making. Coded in Python using Numpy, Pandas, Matplotlib, and Scipy.
+%\tabitem $\lambda_2 < 0 > \lambda_1$
+
+\begin{tabularx}{\textwidth}{p{3.1cm}>{\arraybackslash}X}
+\bfseries{\href{https://github.com/crypdick/RoboSkeeter}{Roboskeeter}} &  \tabitem Researching how mosquitos track heat in turbulent environments while seeking blood. \\
+& \tabitem Created mathematical models of decision-making using windtunnel experimental data.\\
+& \tabitem This research is on-going. I am collaborating on a manuscript for peer-review.\\
 \end{tabularx}
 
 %
@@ -176,18 +182,19 @@
 %\end{itemize}
 
 \ressubheading{Research Assistant}{Seatle, WA}{Fairhall Lab, Dept. of Biophysics, Uni. of Washington}{2014 $\rightarrow$ 2016}
-\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, nolistsep]
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, nolistsep] \vspace{-10pt}
 \item Responsible for simulating experiments (processing data, coding, debugging, analysis) using Python computing and visualization packages.
-\item Learned concepts in neuronal dynamics which are relevant to artificial deep neural networks.
-\item Preparing manuscript for peer-review with my collaborators.\\
+\item Learned concepts in neuronal dynamics which are relevant to artificial deep neural networks.\\
+%\item Preparing manuscript for peer-review with my collaborators.\\
 \end{itemize}
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{~\faGraduationCap~ Education}
 
-    \ressubheading{Artificial Intelligence Engineer Nanodegree}{\href{https://www.udacity.com/nanodegree}{Udacity.com}}{Udacity \& Kaggle}{}%{Jan. 2017 $\rightarrow$ Now}
+\textbf{Artificial Intelligence Engineer Nanodegree}, \textit{Udacity \& Kaggle} \hfill {\href{https://www.udacity.com/nanodegree}{Udacity.com}}
  
-    \ressubheading{B.A., Chemistry/Biology (Honors)}{Sarasota, FL}{New College of Florida}{}%{Aug. 2007 $\rightarrow$ May 2011} % removed as recommended in https://www.themuse.com/advice/45-quick-changes-that-help-your-resume-get-noticed-2
+\textbf{B.A., Chemistry/Biology (Honors)}, \textit{New College of Florida} \hfill Sarasota, FL
+%{Aug. 2007 $\rightarrow$ May 2011} % removed dates as recommended in https://www.themuse.com/advice/45-quick-changes-that-help-your-resume-get-noticed-2
    % Thesis: ``Ebbs and Glows: Quantifying Small RNA Concentrations in \textit{C. elegans}''\\
 
   %  \ressubheading{Harriet L. Wilkes Honors College}{Jupiter, FL}{Early admission in lieu of a high school senior year}{Sep. 2006 $\rightarrow$ May 2007} 
