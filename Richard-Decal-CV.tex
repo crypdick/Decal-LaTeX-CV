@@ -12,7 +12,7 @@
 
 % compress line spacing
 \usepackage{setspace}
-%\setstretch{0.9}
+\setstretch{1.1}
 %\halfspacing
 
 % unindented lists
@@ -24,11 +24,11 @@
 \usepackage[
   height=9in,      % height of the text block
   width=7in,       % width of the text block
-  top=90pt,        % distance of the text block from the top of the page
-  headheight=48pt, % height for the header block
-  headsep=12pt,    % distance from the header block to the text block
+  top=0.5in,        % distance of the text block from the top of the page
+  headheight=0pt, % height for the header block
+  headsep=0pt,    % distance from the header block to the text block
   heightrounded,   % ensure an integer number of lines
- % showframe,       % show the main blocks
+% showframe,       % show the main blocks
   verbose,         % show the values of the parameters in the log file
 ]{geometry}
 
@@ -57,22 +57,23 @@
 % symols
 \usepackage{fontawesome}
 
-%% the header + footer
-\usepackage{lastpage}
+%%% the header + footer
+%\usepackage{lastpage}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\fancyhf{} % clear all fields, including page numbering
 \renewcommand{\headrulewidth}{0pt}  % gets rid of horizontal rule in header
-\lhead{\faMapMarker~~ St. Petersburg, FL, USA \\
- \faEnvelope~ \href{mailto:decal@uw.edu}{decal@uw.edu}  \\
-  \faPhone~~ +1 48448-DECAL \\}
-  
-\rhead{ \href{https://github.com/crypdick}{crypdick}  ~\faGithubAlt\\ 
-\href{https://www.linkedin.com/in/richarddecal/}{richarddecal} ~\faLinkedin~\\
-\href{https://stackoverflow.com/users/4212158/crypdick}{crypdick} ~\faStackOverflow \\
- \href{http://www.richarddecal.com}{homepage} ~\faHome \\
- \tiny{\textit{updated \Today}}}
- 
-\chead{{\Huge Richard \\ Decal} \\ Artificial Intelligence Engineer}
+%\lhead{\faMapMarker~~ St. Petersburg, USA \\
+%  \faPhone~~ +1 48448-DECAL \\
+%   \faEnvelope~ \href{mailto:decal@uw.edu}{decal@uw.edu}\\ \ \\}
+%  
+%\rhead{ \href{https://github.com/crypdick}{crypdick}  ~\faGithubAlt\\ 
+%\href{https://www.linkedin.com/in/richarddecal/}{richarddecal} ~\faLinkedin~\\
+%\href{https://stackoverflow.com/users/4212158/crypdick}{crypdick} ~\faStackOverflow \\
+% \href{http://www.richarddecal.com}{homepage} ~\faHome \\
+% \tiny{\textit{updated \Today}}}
+% 
+%\chead{{\Huge Richard \\ Decal} \\ Artificial Intelligence Engineer}
 
 %Grey heading bars
 % credit to Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
@@ -107,8 +108,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
-%{ Richard Boeri Decal} \\  %TODO: make nicer
+\begin{center}
+{\Huge Richard Boeri Decal} \\
+Artificial Intelligence Engineer \\
+{\small \faMapMarker~ St. Petersburg, USA $\cdot$ \faPhone~ +1 48448-DECAL $\cdot$ \faEnvelope~ \href{mailto:decal@uw.edu}{decal@uw.edu}  \\ \faGithubAlt~ \href{https://github.com/crypdick}{crypdick}   $\cdot$ ~\faLinkedin~ \href{https://www.linkedin.com/in/richarddecal/}{richarddecal}  $\cdot$~\faStackOverflow~  \href{https://stackoverflow.com/users/4212158/crypdick}{crypdick} $\cdot$  ~\faHome~  \href{http://www.richarddecal.com}{homepage} $\cdot$ 
+ \tiny{\textit{updated \Today}}}
+\end{center}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
