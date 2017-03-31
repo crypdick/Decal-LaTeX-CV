@@ -1,5 +1,5 @@
 # Decal-LaTeX-CV
-Richard Decal's beautiful CV, written in LaTeX
+Richard Decal's CV, written in LaTeX
 
 # Requirements
 xcolor
