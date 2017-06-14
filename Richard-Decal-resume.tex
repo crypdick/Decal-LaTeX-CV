@@ -4,8 +4,8 @@
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
 
 \documentclass[a4paper,12pt]{article}
-% for doing basic math on widths e.x. \textwidth-1cm
-\usepackage{calc}% http://ctan.org/pkg/calc
+% for math ops on widths e.x. \textwidth-1cm
+\usepackage{calc}
 
 % custom dates
 \usepackage{datetime2}
@@ -18,13 +18,12 @@
 % unindented lists
 \usepackage{enumitem}
 
-%%%%%%%%%%%%% STYLE STUFF
-
 %Margin setup
 \usepackage[
   height=9in,      % height of the text block
   width=7in,       % width of the text block
   top=0.5in,        % distance of the text block from the top of the page
+  bottom0.5in,   
   headheight=0pt, % height for the header block
   headsep=0pt,    % distance from the header block to the text block
   heightrounded,   % ensure an integer number of lines
@@ -34,27 +33,12 @@
 
 \setlength{\parindent}{0in}  % gray boxes span the text width
 
-%\usepackage[top=0.5in, bottom=0.5in, left=0.75in, right=0.75in]{geometry}
-%%
-%\setlength{\headheight}{71pt}
-%\setlength{\headsep}{0in}
-%\setlength{\paperheight}{11in}
-%\setlength{\paperwidth}{8.5in}
-%\setlength{\tabcolsep}{0in}
-%\setlength{\textheight}{\paperheight-\headheight}
-%\setlength{\textwidth}{7in}
-%\setlength{\topmargin}{0in}
-%\setlength{\topskip}{0in}
-
-%\setlength{\itemsep}{0pt}
-%%\vspace*{1in} 
-
 % Helvetica
 \usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault} 
 \usepackage[T1]{fontenc}
 
-% symols
+% symbols
 \usepackage{fontawesome}
 
 %%% the header + footer
@@ -63,19 +47,8 @@
 \pagestyle{fancy}
 \fancyhf{} % clear all fields, including page numbering
 \renewcommand{\headrulewidth}{0pt}  % gets rid of horizontal rule in header
-%\lhead{\faMapMarker~~ St. Petersburg, USA \\
-%  \faPhone~~ +1 48448-DECAL \\
-%   \faEnvelope~ \href{mailto:decal@uw.edu}{decal@uw.edu}\\ \ \\}
-%  
-%\rhead{ \href{https://github.com/crypdick}{crypdick}  ~\faGithubAlt\\ 
-%\href{https://www.linkedin.com/in/richarddecal/}{richarddecal} ~\faLinkedin~\\
-%\href{https://stackoverflow.com/users/4212158/crypdick}{crypdick} ~\faStackOverflow \\
-% \href{http://www.richarddecal.com}{homepage} ~\faHome \\
-% \tiny{\textit{updated \Today}}}
-% 
-%\chead{{\Huge Richard \\ Decal} \\ Artificial Intelligence Engineer}
 
-%Grey heading bars
+% Grey header bars
 % credit to Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
 \usepackage[svgnames]{xcolor}
 \definecolor{mygrey}{gray}{0.94}
@@ -119,9 +92,9 @@ Artificial Intelligence Engineer \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{~~Skills \hfill {\small$^\star$ denotes proficiency}}
 \begin{tabularx}{\textwidth}{p{3cm}>{\arraybackslash}X}
-  \bfseries{Algorithms} & Regression   $\cdot$  Clustering  $\cdot$ Gradient descent$^\star$ $\cdot$ Cross-validation    $\cdot$  PCA $\cdot$ Neural networks   $\cdot$  \mbox{Neural style transfer$^\star$} \\
+  \bfseries{Algorithms} & Supervised, unsupervised, and reinforcment learning $\cdot$ Cross-validation    $\cdot$  PCA $\cdot$ \mbox{Neural style transfer$^\star$} \\
   \bfseries{Languages} & Python$^\star$   $\cdot$ some C++  \\
-  \bfseries{Coding} & Machine learning  $\cdot$ Pandas$^\star$ $\cdot$ Numpy$^\star$ $\cdot$ Scikit-learn   $\cdot$ \mbox{Matplotlib  } $\cdot$ Git$^\star$ $\cdot$ \mbox{Unix CLI }  \\
+  \bfseries{Coding} & Tensorflow  $\cdot$ Pandas$^\star$ $\cdot$ Numpy$^\star$ $\cdot$ Scikit-learn   $\cdot$ \mbox{Matplotlib  } $\cdot$ Git$^\star$ $\cdot$ \mbox{Unix CLI*}  \\
   %\bfseries{OS} & Linux$^\star$ $\cdot$ MS Windows$^\star$ $\cdot$  Mac OS X$^\star$ $\cdot$ Android$^\star$ $\cdot$ iOS  \\
   \bfseries{Research} &  Experienced in computational neuroscience, biochemistry, genetics research. I am co-author on several peer-reviewed scientific publications.\\
   \bfseries{Misc.} & Espa\~nol$^\star$ $\cdot$ English$^\star$ $\cdot$ Italian  $\cdot$ Technical writing  \\  % Web data scraping USA/EU Dual-citizen
@@ -136,6 +109,15 @@ Artificial Intelligence Engineer \\
 %The third bullet point tells the reader the tangible impact your project had.
 
 %\tabitem $\lambda_2 < 0 > \lambda_1$
+
+\begin{tabularx}{\textwidth}{p{3cm}>{\arraybackslash}X}
+\bfseries{\href{https://github.com/crypdick/policy-gradients-cartpole}{Solving \mbox{CartPole}}} &  \tabitem I solved \href{https://gym.openai.com/envs/CartPole-v0}{CartPole}, a continuous classic control video game, using reinforcement learning and policy gradients.
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{p{3cm}>{\arraybackslash}X}
+\bfseries{\href{https://github.com/crypdick/predict-donors-California-census}{Predicting Californian Incomes}} &  \tabitem Data analysis of the \href{https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf}{California census data} to predict incomes of individuals based on 14 characteristics using feature engineering, support vector machines, and cross-validation.
+\end{tabularx}
+
 
 \begin{tabularx}{\textwidth}{p{3cm}>{\arraybackslash}X}
 \bfseries{\href{https://github.com/crypdick/RoboSkeeter}{Roboskeeter}} &  \tabitem Researching how mosquitos track heat in turbulent environments while seeking blood. \\
@@ -192,7 +174,7 @@ Artificial Intelligence Engineer \\
 %\item Preparing manuscript for peer-review.
 %\end{itemize}
 
-\ressubheading{Research Assistant}{Seatle, WA}{Fairhall Lab, Dept. of Biophysics, Uni. of Washington}{2014 $\rightarrow$ 2016}
+\ressubheading{Research Assistant}{Seattle, WA}{Fairhall Lab, Dept. of Biophysics, Uni. of Washington}{2014 $\rightarrow$ 2016}
 \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, nolistsep] \vspace{-10pt}
 \item Responsible for simulating experiments (processing data, coding, debugging, analysis) using Python computing and visualization packages.
 \item Learned concepts in neuronal dynamics which are relevant to artificial deep neural networks.\\
