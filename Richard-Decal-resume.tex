@@ -52,7 +52,7 @@
 % credit to Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
 \usepackage[svgnames]{xcolor}
 \definecolor{mygrey}{gray}{0.94}
-\newcommand{\resheading}[1]{{\vspace*{.06in} \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textmd{\large \textbf{#1} \vphantom{p\^{E}}}}\end{minipage}}} }
+\newcommand{\resheading}[1]{{\vspace*{.001in} \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textmd{\large \textbf{#1} \vphantom{p\^{E}}}}\end{minipage}}} }
 
 % job sections
 \newcommand{\ressubheading}[4]{
@@ -84,22 +84,27 @@
 \begin{center}
 {\Huge Richard Boeri Decal} \\
 %Artificial Intelligence Engineer \\
-{\small \faMapMarker~ Sarasota, FL, USA $\cdot$ \faPhone~ (+1)48-448-DECAL $\cdot$ \faEnvelope~ \href{mailto:richard.decal@ncf.edu}{richard.decal@ncf.edu}  \\ \faGithubAlt~ \href{https://github.com/crypdick}{crypdick}   $\cdot$ ~\faLinkedin~ \href{https://www.linkedin.com/in/richarddecal/}{richarddecal}  $\cdot$~\faStackOverflow~  \href{https://stackoverflow.com/users/4212158/crypdick}{crypdick} $\cdot$  ~\faHome~  \href{http://www.richarddecal.com}{richarddecal.com} $\cdot$ 
+{\small \faMapMarker~ Sarasota, FL, USA $\cdot$ \faPhone~ (+1) 48-448-DECAL $\cdot$ \faEnvelope~ \href{mailto:richard.decal@ncf.edu}{richard.decal@ncf.edu}  \\ \faGithubAlt~ \href{https://github.com/crypdick}{crypdick}   $\cdot$ ~\faLinkedin~ \href{https://www.linkedin.com/in/richarddecal/}{richarddecal}  $\cdot$~\faStackOverflow~  \href{https://stackoverflow.com/users/4212158/crypdick}{crypdick} $\cdot$  ~\faHome~  \href{http://www.richarddecal.com}{richarddecal.com} $\cdot$ 
  \tiny{\textit{updated \Today}}}
 \end{center}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{~~Skills \hfill {\small$^+$ denotes proficiency}}
-\vspace{-1em}
-\begin{tabularx}{\textwidth}{p{3cm}>{\arraybackslash}X}
-  \bfseries{Algorithms} & Supervised, unsupervised, and reinforcement learning $\cdot$ Cross-validation    $\cdot$  PCA \\
-  \bfseries{Languages} & Python$^+$   $\cdot$ R $\cdot$ SQL \\
-  \bfseries{Packages} & Tensorflow  $\cdot$ Pandas$^+$ $\cdot$ Numpy$^+$ $\cdot$ Scikit-learn   $\cdot$ \mbox{Matplotlib}$^+$  \\
-  %\bfseries{OS} & Linux$^\star$ $\cdot$ MS Windows$^\star$ $\cdot$  Mac OS X$^\star$ $\cdot$ Android$^\star$ $\cdot$ iOS  \\
-  \bfseries{Misc.} & Espa\~nol$^+$ $\cdot$ English$^+$ $\cdot$ Italiano  $\cdot$ UNIX systems$^+$ \\ %$\cdot$ \LaTeX$^+$ \\  % Web data scraping USA/EU Dual-citizen
-  \bfseries{Passions} & Travel, teaching, learning, social justice, tiny living. Research interests: molecular biology, climate science, computational neuroscience, +++.
-\end{tabularx}
+%\vspace{-1em}
+\resheading{~~Skills \hfill {\small$^+$ denotes proficiency}}%\vspace*{0.5em}
+
+\textbf{Languages} Python$^+$   $\cdot$ R $\cdot$ SQL $\cdot$ BASH $\cdot$ Espa\~nol$^+$ $\cdot$ English$^+$ $\cdot$ Italiano
+
+\textbf{Packages} Tensorflow  $\cdot$ Pandas$^+$ $\cdot$ Numpy$^+$ $\cdot$ Scikit-learn   $\cdot$ \mbox{Matplotlib}$^+$
+
+\textbf{Passions} Travel, teaching, learning, social justice, tiny living. Research interests: molecular biology, climate science, computational neuroscience, +++.
+
+%\begin{tabularx}{\textwidth}{p{3cm}>{\arraybackslash}X}
+%  \bfseries{Languages} & Python$^+$   $\cdot$ R $\cdot$ SQL \\
+%  \bfseries{Packages} & Tensorflow  $\cdot$ Pandas$^+$ $\cdot$ Numpy$^+$ $\cdot$ Scikit-learn   $\cdot$ \mbox{Matplotlib}$^+$  \\
+%  %\bfseries{OS} & Linux$^\star$ $\cdot$ MS Windows$^\star$ $\cdot$  Mac OS X$^\star$ $\cdot$ Android$^\star$ $\cdot$ iOS  \\
+%  \bfseries{Misc.} &  systems$^+$ \\ %$\cdot$ \LaTeX$^+$ \\  % Web data scraping USA/EU Dual-citizen
+%  \bfseries{Passions} & Travel, teaching, learning, social justice, tiny living. Research interests: molecular biology, climate science, computational neuroscience, +++.
+%\end{tabularx}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,15 +113,21 @@
 %The second bullet point tells the reader your specific contribution to the project. For example, what technologies you used to accomplish certain aspects of the project.
 %The third bullet point tells the reader the tangible impact your project had.
 %\tabitem $\lambda_2 < 0 > \lambda_1$
-\vspace{-1em}
-\setlength{\extrarowheight}{.5em}
-\begin{tabularx}{\textwidth}{p{3cm}>{\arraybackslash}X}
-\bfseries{\href{https://github.com/crypdick/policy-gradients-cartpole}{CartPole}} & I solved \href{https://gym.openai.com/envs/CartPole-v0}{CartPole} (a continuous classic control game) using policy gradients.\\
+%\vspace{-1em}
+\textbf{\href{https://github.com/crypdick/policy-gradients-cartpole}{CartPole}} I solved \href{https://gym.openai.com/envs/CartPole-v0}{CartPole} (a continuous classic control game) using policy gradients.
 
-\bfseries{\href{https://github.com/crypdick/predict-donors-California-census}{Income \mbox{Prediction}}} & Predicted incomes using \href{https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf}{California census data} based on 14 characteristics using feature engineering, support vector machines, and cross-validation.\\
+\textbf{\href{https://github.com/crypdick/predict-donors-California-census}{CA Income \mbox{Prediction}}} Predicted incomes using \href{https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf}{California census data} based on 14 characteristics using feature engineering, support vector machines, and cross-validation.
 
-\bfseries{\href{https://github.com/crypdick/RoboSkeeter}{Roboskeeter}}  \mbox{\textnormal{\textit{(ongoing)}}} &  Created models of mosquito heat-tracking behavior during foraging from windtunnel experimental data.
-\end{tabularx}
+\textbf{\href{https://github.com/crypdick/RoboSkeeter}{Roboskeeter}\mbox{\textnormal{\textit{(ongoing)}}}}   Modeling mosquito heat-tracking behavior during foraging based on windtunnel experimental data.
+%
+%\setlength{\extrarowheight}{.5em}
+%\begin{tabularx}{\textwidth}{p{3cm}>{\arraybackslash}X}
+%\bfseries{\href{https://github.com/crypdick/policy-gradients-cartpole}{CartPole}} & I solved \href{https://gym.openai.com/envs/CartPole-v0}{CartPole} (a continuous classic control game) using policy gradients.\\
+%
+%\bfseries{\href{https://github.com/crypdick/predict-donors-California-census}{Income \mbox{Prediction}}} & Predicted incomes using \href{https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf}{California census data} based on 14 characteristics using feature engineering, support vector machines, and cross-validation.\\
+%
+%\bfseries{\href{https://github.com/crypdick/RoboSkeeter}{Roboskeeter}}  \mbox{\textnormal{\textit{(ongoing)}}} &  Created models of mosquito heat-tracking behavior during foraging from windtunnel experimental data.
+%\end{tabularx}
 
 %
 %\ressubheading{\hypertarget{Mosquitogrant}Multisensory Integration in Mosquitos}{Seatle, WA}{Fairhall Lab, University of Washington}{Oct. 2014 $\rightarrow$ Now}
@@ -160,37 +171,45 @@
 %    
 %%       \hypertarget{thesispub} \textbf{\textbf{Decal RB}}. ``\href{http://tinyurl.com/RichardDecal-NCF-Thesis}{Ebbs and Glows: Quantifying Small RNA Concentrations in \textit{C. elegans}}". Honors thesis, New College of Florida. May 2011. 108 pages.\\
 \resheading{~~Experience}
-
+%\vspace{-1em}
 %\ressubheading{Owner and Creator Assistant}{Seatle, WA}{Light Recycled}{Oct. 2014 $\rightarrow$ Jan. 2016}
 %\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, nolistsep]
 %\item Created simulations of mosquito decision-making experiments using SciPy.
 %\item Preparing manuscript for peer-review.
 %\end{itemize}
+\textbf{Dept. of Biophysics, Uni. of Washington: Research Assistant} \hfill 2014 $\rightarrow$ 2016
 
-\ressubheading{Research Assistant}{Seattle, WA}{Fairhall Lab, Dept. of Biophysics, Uni. of Washington}{2014 $\rightarrow$ 2016}
-\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, nolistsep] \vspace{-10pt}
-\item Simulated mosquito thermonavigation (data munging, design, coding, visualization, analysis).
-\item Learned concepts in neuronal dynamics which are relevant to artificial deep neural networks.\\
-%\item Preparing manuscript for peer-review with my collaborators.\\
-\end{itemize}
+Simulated mosquito thermonavigation (data munging, design, coding, visualization, analysis). Learned concepts in neuronal dynamics which are relevant to artificial deep neural networks.
+
+%\ressubheading{Research Assistant}{Seattle, WA}{Fairhall Lab, Dept. of Biophysics, Uni. of Washington}{2014 $\rightarrow$ 2016}
+%
+%\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, nolistsep] \vspace{-10pt}
+%\item Simulated mosquito thermonavigation (data munging, design, coding, visualization, analysis).
+%\item Learned concepts in neuronal dynamics which are relevant to artificial deep neural networks.\\
+%%\item Preparing manuscript for peer-review with my collaborators.\\
+%\end{itemize}
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{~~Publications}
+%\vspace{-1em}
+\resheading{~~PUBLICATIONS}
 
-      ``\href{http://www.pnas.org/content/early/2012/06/12/1120688109}{Analysis of neural subtypes reveals selective mitochondrial dysfunction in dopaminergic neurons from parkin mutants}". \textit{PNAS} 2012. 109(26):10438-43.\\
-      ``\href{http://www.genetics.org/content/190/3/1059.full}{Destruction Complex Function in the Wnt Signaling Pathway of Drosophila Requires Multiple Interactions Between Adenomatous Polyposis Coli 2 and Armadillo}". \textit{Genetics} 2012. 190(3):1059-75.\\
-      ``Quantifying Small RNA Concentrations in \textit{C. elegans}". Honors thesis. 2011.\\
+``\href{http://www.pnas.org/content/early/2012/06/12/1120688109}{Analysis of neural subtypes reveals selective mitochondrial dysfunction in dopaminergic neurons from parkin mutants}". \textit{PNAS} 2012. 109(26):10438-43.
+
+``\href{http://www.genetics.org/content/190/3/1059.full}{Destruction Complex Function in the Wnt Signaling Pathway of Drosophila Requires Multiple Interactions Between Adenomatous Polyposis Coli 2 and Armadillo}". \textit{Genetics} 2012. 190(3):1059-75.
+
+``Quantifying Small RNA Concentrations in \textit{C. elegans}". Honors thesis. 2011.
 
     
     
 %%%%%%%%%%%%%%%%%
-\resheading{~~Education}
+\resheading{~~EDUCATION}
+%\vspace{-1em}
 
-\textbf{M.S. Data Science}, \textit{New College of Florida. Expected 2019.} \hfill Sarasota, FL
+\textbf{M.S. Data Science}, \textit{New College of Florida.} \hfill 2019
 
-\textbf{Artificial Intelligence Engineer Nanodegree}, \textit{Udacity \& Kaggle} \hfill {\href{https://www.udacity.com/nanodegree}{Udacity.com}}
+\textbf{Artificial Intelligence Engineer Nanodegree}, \textit{Udacity \& Kaggle} \hfill 2017
  
-\textbf{B.A., Chemistry/Biology (Honors)}, \textit{New College of Florida} \hfill Sarasota, FL
+\textbf{B.A., Chemistry/Biology (Honors)}, \textit{New College of Florida} \hfill 2011
 %{Aug. 2007 $\rightarrow$ May 2011} % removed dates as recommended in https://www.themuse.com/advice/45-quick-changes-that-help-your-resume-get-noticed-2
    % Thesis: ``Ebbs and Glows: Quantifying Small RNA Concentrations in \textit{C. elegans}''\\
 
