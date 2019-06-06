@@ -76,6 +76,7 @@
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
+%\usepackage{CJKutf8}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,9 +94,9 @@
 \vspace{-1em}
 \begin{tabularx}{\textwidth}{p{2.1cm}>{\arraybackslash}X}
   \bfseries{Languages} & Python$^+$ $\cdot$ R  $\cdot$ BASH $\cdot$ RegExp $\cdot$ ECL $\cdot$ Espa\~nol$^+$ $\cdot$ English$^+$ $\cdot$ Italiano \\  % $\cdot$ SAS
-  \bfseries{Tools} & Tensorflow  $\cdot$ Pandas$^+$, \mbox{MongoDB}, PostgreSQL, HBase $\cdot$ SciPy$^+$ $\cdot$ PySpark, Hadoop, HPCC $\cdot$ Plotly Dash, Flask $\cdot$ Tidyverse $\cdot$ BeautifulSoup $\cdot$ SSH, AWS \\
+  \bfseries{Tools} & Tensorflow  $\cdot$ Pandas$^+$, \mbox{MongoDB}, PostgreSQL, HBase $\cdot$ SciPy$^+$ $\cdot$ PySpark, Hadoop, HPCC $\cdot$ Plotly Dash, Flask $\cdot$ Tidyverse $\cdot$ BeautifulSoup, Scrapy $\cdot$ SSH, AWS \\%  $\cdot$ GraphViz  \\
   %\bfseries{OS} & Linux$^\star$ $\cdot$ MS Windows$^\star$ $\cdot$  Mac OS X$^\star$ $\cdot$ Android$^\star$ $\cdot$ iOS  \\
-  \bfseries{Passions} & AI for good: carbon sequestration, existential risk,  healthcare,  computational neuroscience, disinformation, education, molecular bio. Travel, \href{https://www.flickr.com/photos/richarddecal/sets/72157640025469005/}{photos}, my tiny home.
+  \bfseries{Passions} & AI for good: carbon sequestration, existential risk, healthcare, anti-propaganda, anti-censorship, education, molecular bio. Travel, \href{https://www.flickr.com/photos/richarddecal/sets/72157640025469005/}{photos}, my tiny home.
 \end{tabularx}
 
 
@@ -120,7 +121,7 @@ Enabling neuron tracing of petabyte-scale brain microscope data using deep reinf
 
 
 \textbf{Classroom Mentor}, \textit{Intro to Programming Nanodegree, Udacity} \hfill 2017 --- 2018\\
-Guided students one-on-one in the Python for Data Analysis Track.
+Guided students 1-on-1 in the \textit{Python for Data Analysis} Track.
 
 \textbf{Research Assistant}, \textit{Fairhall Lab, Dept. of Biophysics, Uni. of Washington} \hfill 2014 --- 2016\\
 %\ressubheading{Research Assistant}{Seattle, WA}{}{2014 --- 2016}
@@ -169,15 +170,23 @@ Simulating mosquito thermal plume navigation using agent-based models of windtun
 
 %\bfseries{\href{https://github.com/Vaa3D/vaa3d_tools/tree/master/hackathon/profundo}{Profundo}} & Using deep reinforcement learning to automatically trace neuron morphologies.\\
 
-      \bfseries{\href{https://github.com/amiralansary/tensorpack-medical}{Tensorpack}} & Contributed to deep reinforcement learning framework for medical image data.\\
+      \bfseries{Author ID} & NLP analysis to deanonymize the \textit{New York Times} \href{https://www.nytimes.com/2018/09/05/opinion/trump-white-house-anonymous-resistance.html}{``Resistance Op-Ed''} author.\\
 
-      \bfseries{\href{https://github.com/ncf-ds/police-traffic-stop-explorer}{PolceStops}} & Created a webapp to query and visualize the \href{https://openpolicing.stanford.edu/data/}{Stanford Open Policing dataset}.\\
+      \bfseries{\href{https://github.com/amiralansary/tensorpack-medical}{Tensorpack}} & Contributed to deep learning framework for automating medical imaging tasks.\\
+
+%	\bfseries{visit2vec} & Created a word2vec variant for embedding patient visits \& clustering.\\
+
+	% \bfseries{Etsy Trends} & Stealth start-up: scraping Etsy \& programatically generating product ideas.   \\
+
+
+ %     \bfseries{\href{https://github.com/ncf-ds/police-traffic-stop-explorer}{PolceStops}} & Created a webapp to query and visualize the \href{https://openpolicing.stanford.edu/data/}{Stanford Open Policing dataset}.\\
 
  %     \bfseries{\href{https://github.com/crypdick/predict-donors-California-census}{Income \mbox{Prediction}}} & Predicted incomes using \href{https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf}{California census data} using feature engineering, support vector machines, and cross-validation.\\
 
-%\bfseries{\href{https://www.flickr.com/photos/richarddecal/sets/72157655653035375/with/19534941902/}{Income \mbox{Prediction}}} & Predicted incomes using \href{https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf}{California census data} using feature engineering, support vector machines, and cross-validation.\\
+	\bfseries{\href{https://github.com/crypdick/CapsNet-Keras-notMNIST}{Capsule Net}} & Using \href{https://arxiv.org/abs/1710.09829}{CapsNet} for \href{https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction}{manifold learning} of notMNIST; synthesizing new digits.\\
 
-      \bfseries{\href{https://github.com/crypdick/policy-gradients-cartpole/blob/master/capstone_report.pdf}{CartPole}} &  I solved a physics game using a deep policy gradient neural network.
+      \bfseries{\href{https://github.com/crypdick/policy-gradients-cartpole/blob/master/capstone_report.pdf}{CartPole}} &  I solved a physics game using a deep policy gradient neural network.\\
+
       \end{tabularx}
 
       %
@@ -215,7 +224,7 @@ Simulating mosquito thermal plume navigation using agent-based models of windtun
 %%%%%%%%%%%%%%%%%
 \resheading{~~Education}
 
-\textbf{M.S. Data Science}, \textit{New College of Florida.} Full tuition scholarship. \hfill Dec. 2018\\
+\textbf{M.S. Data Science}, \textit{New College of Florida.} Full tuition scholarship. \hfill 2018\\
 %\textbf{Artificial Intelligence Engineer Nanodegree}, \textit{Udacity} \hfill 2017\\
 \textbf{B.A., Chemistry/Biology (Honors)}, \textit{New College of Florida} \hfill 2011
 %{Aug. 2007 $\rightarrow$ May 2011} % removed dates as recommended in https://www.themuse.com/advice/45-quick-changes-that-help-your-resume-get-noticed-2
