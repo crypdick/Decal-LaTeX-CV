@@ -18,7 +18,7 @@
 %style stuff
 %%%%%%%%%%%%
 %\newlength{\outerbordwidth}
-\raggedbottom
+\raggedbottom  % no extra space at the bottom of the page
 %\raggedright
 
 \usepackage{framed}
@@ -109,6 +109,8 @@
 \usepackage{ltablex}
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
     \begin{center}
@@ -122,7 +124,7 @@
     \resheading{Profile}
 
     Machine learning scientist on a personal and professional mission to fight against climate change.
-    Team lead experienced with 0-to-1 bootstrapping of ML teams, ML products, data collection teams, and data collection products.
+    Team lead experienced with 0-to-1 bootstrapping of ML teams, ML products, data collection teams, and data engines.
     %Expertise in applying cloud computing and statistical modeling to engineering, scientific, and real-world problems.
     %Led teams to build, ship, and maintain end-to-end ML products, and trained data labeling teams.
     %Able to seek input from outside experts to create domain-crossing solutions designed to scale.
@@ -174,10 +176,11 @@
 
     \vspace{-6pt} Founding ML lead. Full-stack, full life-cycle ML for scalable ecosystem restoration.
     \begin{itemize}
-        \item Single-threaded owner of ML roadmap (aligned with product roadmap). Charted priorities, KPIs, and OKRs. Wrote project charters, design docs, SWOT analyses, effort-value matrices.  Led Agile sprints.
+        \item Owner of ML roadmap (aligned with product roadmap \& operations dept.). Charted priorities, KPIs, and OKRs. Wrote project charters, design docs, SWOT analyses, effort-value matrices. Led Agile sprints.
         \item Headed R\&D and deployment of internally- and externally-facing ML products (\texttt{Pytorch}).
         \begin{itemize}
             \item Refined product requirements with stakeholders for deep learning systems to enable whole-ecosystem restoration.
+            \item Spearheaded KPI-driven development: KPI selection, tracking, review meetings, action plans, and retrospectives.
             \item Researched, experimented, and productionized novel techniques: data augmentations, samplers, optimization functions, etc.
             \item Translated state-of-the-art self-supervised learning (SSL) research into production-ready code.
             \item Devised prediction QC workflows: systematic triggers for detecting model false positives and out-of-distribution data, preventing customer-impacting incidents.
@@ -187,8 +190,8 @@
             \item Responsible for full life-cycle of dataset and model artifacts, quality assurance;
             tracking artifact lineage, parameters for reproducibility (\texttt{MetaFlow}).
             \item Optimized latency and throughput of elastically-scaling clusters (\texttt{S3, Ray/Anyscale}).
-            \item Wrote hooks to enable observability into our pipelines (\texttt{AWS Cloudwatch, AWS Lambda, Slackbots, UMAP, Altair}). Presented incidents at weekly Operational Excellence meetings.
-            \item Led initiative to automate and systematize all workflows (\texttt{custom orchestrator}).
+            \item Enabled observability in our pipelines (\texttt{Cloudwatch, Slackbots, UMAP, Sentry}). Reported incidents weekly to prevent customer-impacting incidents.
+            \item Led initiative to automate all workflows (\texttt{custom orchestrator, $\lambda$}).
             \item Enforced code quality and correctness using pre-commit hooks, CI (\texttt{Bitbucket Pipelines}), ML sanity checks, property-based testing (\texttt{Hypothesis}), run-time validation (\texttt{Pandera}), design-by-contract (\texttt{beartype}).
         \end{itemize}
         %\item Member of council that strategized company re-org to enable internally-led disruption of our business model.
