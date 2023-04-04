@@ -2,11 +2,13 @@
 Richard Decal's CV, written in LaTeX
 
 # Requirements
+```
 xcolor
 tocloft
 enumitem
 framed
 mar­vosym
+```
 
 ...and probably a few others that are bundled within Ubuntu's Latex recommended and extas packages.
 
