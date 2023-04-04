@@ -6,6 +6,8 @@
 % (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
 % credit to Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd for the grey boxes
 
+% requirements on Ubuntu: texlive-full texlive-latex-extra texlive-fonts-extra
+
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
 \documentclass[a4paper,12pt]{article}
 
@@ -123,12 +125,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \resheading{Profile}
 
-    Machine learning scientist on a personal and professional mission to fight against climate change.
-    Team lead experienced with 0-to-1 bootstrapping of ML teams, ML products, data collection teams, and data engines.
+    Full-stack machine learning scientist with expertise in applying cloud computing and statistical modeling to real-world problems.
+    Team lead experienced with 0-to-1 bootstrapping of ML products, data collection teams, and data engines (plus their
+     maintenance and scaling).
     %Expertise in applying cloud computing and statistical modeling to engineering, scientific, and real-world problems.
     %Led teams to build, ship, and maintain end-to-end ML products, and trained data labeling teams.
     %Able to seek input from outside experts to create domain-crossing solutions designed to scale.
-    Former molecular biologist.\\
+    Former molecular biologist.
+
+    \vspace{0.5em} % half space
 
     Style: 1) orient to customer needs, 2) design from first principles, 3) build in vertical slices.\\
 
@@ -184,19 +189,21 @@
             \item Researched, experimented, and productionized novel techniques: data augmentations, samplers, optimization functions, etc.
             \item Translated state-of-the-art self-supervised learning (SSL) research into production-ready code.
             \item Devised prediction QC workflows: systematic triggers for detecting model false positives and out-of-distribution data, preventing customer-impacting incidents.
+            \item Designed novel data collection tooling powered by reverse image search (\texttt{custom}).
         \end{itemize}
-        \item Architect, develop, maintain, and monitor AWS-native cloud-scale ML workflows: data processing, hyperparameter tournaments, training, evaluation, serving, monitoring.
+        \item MLOps: Architect, develop, maintain, and monitor AWS-native cloud-scale ML workflows: data processing, hyperparameter tournaments, training, evaluation, serving, monitoring.
         \begin{itemize}
             \item Responsible for full life-cycle of dataset and model artifacts, quality assurance;
             tracking artifact lineage, parameters for reproducibility (\texttt{MetaFlow}).
-            \item Optimized latency and throughput of elastically-scaling clusters (\texttt{S3, Ray/Anyscale}).
+            \item Optimized latency and throughput of elastically-scaling clusters (\texttt{S3, Ray/Anyscale}). Increased throughput of training and inference jobs $>$10x.
             \item Enabled observability in our pipelines (\texttt{Cloudwatch, Slackbots, UMAP, Sentry}). Reported incidents weekly to prevent customer-impacting incidents.
-            \item Led initiative to automate all workflows (\texttt{custom orchestrator, $\lambda$}).
+            \item Led initiative to automate all workflows (\texttt{custom orchestrator}). Later, reimplemented as serverless to improve reliability and cost (\texttt{Step Functions, API Gateway, $\lambda$, EventBridge}).
             \item Enforced code quality and correctness using pre-commit hooks, CI (\texttt{Bitbucket Pipelines}), ML sanity checks, property-based testing (\texttt{Hypothesis}), run-time validation (\texttt{Pandera}), design-by-contract (\texttt{beartype}).
         \end{itemize}
         %\item Member of council that strategized company re-org to enable internally-led disruption of our business model.
         \item Set strategic vision for data-centric ML (aka ``data obsessed'').
         \begin{itemize}
+            \item Key strategist for company-wide transformation from a services company to a product-based ML company using ``Zone to Win'' framework.
             \item Wrote executive reports on labelling rates and strategized an overhaul of our data collection process (\texttt{Jupyter}).
             \item Set business and system requirements, and system design for systemic data collection process. Headed tooling overhaul. Point-person for external vendor assessment and selection.
             \item Pioneered custom techniques and tools for:
