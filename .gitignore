@@ -109,3 +109,6 @@ sympy-plots-for-*.tex/
 # xindy
 *.xdy
 
+CV examples/*
+out/*
+*.jpg
