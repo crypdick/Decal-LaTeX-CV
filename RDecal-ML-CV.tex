@@ -153,78 +153,61 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \resheading{Machine Learning Experience}
 
-% recruited 
-% Develop and implement 
-% design, implementation, negotiation and execution 
-% investors
-% full lifecycle
-% manage, work with
-% Produce and manage
-% Instrumental in the development of 
-%  Involved in the strategy, planning, and execution of official company events in support of Employee Engagement.
-% Provide action recommendations,  analysis, and strategies 
-% Maintain confidentiality and legal policy in accordance with federal law, i
-% Pipelines
-% 
-%    researching, consulting, analysing and evaluating system program needs
-%    identifying technology limitations and deficiencies in existing systems and associated processes, procedures and methods
-%    testing, debugging, diagnosing and correcting errors and faults in an applications programming language within established testing protocols, guidelines and quality standards to ensure programs and applications perform to specification
-%    writing and maintaining program code to meet system requirements, system designs and technical specifications in accordance with quality accredited standards
-% encoded
-% roadmap
-%    writing, updating and maintaining technical program, end user documentation and operational procedures
-%    providing advice, guidance and expertise in developing proposals and strategies for software design activities such as financial evaluation and costings for recommending software purchases and upgrades
-% spatial statistics
-% 
 
-    \ressubheading{Lead Machine Learning Engineer}{Fully Remote}{Dendra Systems}{Feb. 2020 --- Now}
+    \ressubheading{Lead Machine Learning Engineer}{Remote}{\href{dendra.io}{Dendra Systems}}{Feb. 2020 --- Now}
 
-    \vspace{-6pt} Founding ML lead. Full-stack, full life-cycle ML for scalable ecosystem restoration.
+    \vspace{-6pt} \textit{Dendra uses swarms of seeding drones to restore ecosystems and monitor biodiversity at scale}. Founding ML lead. Full-stack, full life-cycle ML for scalable ecosystem restoration.
     \begin{itemize}
-        \item Owner of ML roadmap (aligned with product roadmap \& operations dept.). Established priorities, KPIs, and OKRs.
-        \item Headed R\&D and deployment of internally- and externally-facing ML products (\texttt{Pytorch}).
+        \item Championed transformation from a services company to a ML product company using ``Zone to Win'' framework.
+        \item Initiative owner: training large computer vision models for species identification.
         \begin{itemize}
-            \item Refined product requirements with stakeholders for model-in-the-loop systems to scale species identification in UHR imagery.
-            \item Spearheaded KPI-driven development: KPI selection, tracking, review meetings, action plans, and retrospectives.
-            \item Researched, experimented, and productionized novel techniques: data augmentations, samplers, optimization functions, etc.
-            \item Translated state-of-the-art self-supervised learning (SSL) research into production-ready code.
-            \item Devised prediction QC workflows: systematic triggers for detecting model false positives and out-of-distribution data, preventing customer-impacting incidents.
-            \item Designed novel data collection tooling powered by reverse image search (\texttt{custom}).
+            \item Bootstrapped end-to-end species ID stack: data processing, hyperparameter tournaments, training, evaluation, serving, monitoring.
+            \item Translated state-of-the-art self-supervised learning research into production to improve model robustness and reduce required labeled training data (\texttt{Pytorch}).
+            \item Researched, experimented, and productionized novel ML techniques: models, samplers, optimization functions, etc.
+            \item Created custom data augmentations to make model robust to irrelevant features.
+            \item Developed few-shot learning techniques to enable rapid bootstrapping insights to new species and novel biomes.
+            \item Owner of ML roadmap (aligned with product roadmap \& operations dept.). Established priorities, KPIs, and OKRs.
         \end{itemize}
-        \item MLOps: Architected, developed, and monitor AWS-native cloud-scale ML workflows: data processing, hyperparameter tournaments, training, evaluation, serving, monitoring.
+        \item Integrated species ID models into customer-facing platform and internal tooling.
         \begin{itemize}
+            \item Conceived novel model-in-the-loop annotation tooling, accelerating insights delivery by over 80x.
+            \item Devised model performance QC workflows to ensure we satisfy our SLAs.
+        \end{itemize}
+        \item Set strategic vision for ``data obsessed'' ML and spearheaded the initiative.
+        \begin{itemize}
+            \item Strategized overhaul of our data collection process to enable ML on long-tailed, open-world inference across thousands of target classes. Set business and system requirements, and system design for strategic labeling workflows (\texttt{PlantUML}).
+            \item Implemented active learning methodologies to systematically harvest ``high-leverage'' data, preventing hallucinations on out-of-distribution data.
+            \item Implemented novelty-maximizing data pruning to enable pareto-optimal (exponential) model scaling laws. Reduced training data by 60\% while maintaining performance.
+            \item Devised unsupervised ``trip-wires'' for detecting model failures in production. Integrated alerts into project tracker for strategic annotation team so that we can proactively fix the issue (\texttt{Jira}).
+            \item Headed data curation tooling initiative (\textit{C4 diagrams}). Point-person for external vendor assessment and selection.
+            \item Created ``ML University'' lectures to educate ecologists on ML concepts and labeling best practices for high-quality data. Oversaw ML data collection team, developed rule-sets for data labeling and trained data annotation supervisor.
+            \item Collaborated with ecologists to create model failure reports and gain intuition for model failures. Created data collection campaigns to patch biases in training data.
+            \item Devised annotation QA and QC workflows: systematically identifying mislabeled and/or partially labeled samples to create ``self-healing'' training dataset.
+        \end{itemize}
+        \item Scaling \& Operational Excellence: Architected AWS-native cloud-scale infrastructure.
+        \begin{itemize}
+            \item Wrote distributed, scale-agnostic infrastructure for training, hyperparameter tuning, and inference (\texttt{Ray/Anyscale, AWS Batch}).
+            \item Implemented Bayesian hyperparameter tournaments which aggressively kill underperforming trials, reducing training costs by 20x (\texttt{Ray Tune, HyperOpt, ASHA}).
+            \item Identified bottlenecks and optimized throughput for multi-GPU jobs (\texttt{Grafana}).
+        \end{itemize}
+        \item MLOps: Championed efforts to implement best practices for ML systems.
+        \begin{itemize}
+            \item Responsible for debugging model failures with paranoid programming, detailed chronicling, model interpretability algorithms (e.g. GradCAM),  and heavy visualization of training dynamics.
             \item Responsible for full life-cycle of dataset and model artifacts, quality assurance:
             tracking artifact lineage, parameters for reproducibility (\texttt{MetaFlow}).
-            \item Optimized latency and throughput of elastically-scaling clusters (\texttt{S3, Ray/Anyscale}). Increased throughput of training and inference jobs $>$10x.
-            \item Enabled observability in our pipelines (\texttt{Cloudwatch, Slackbots, UMAP, Sentry}). Reported incidents weekly to prevent customer-impacting incidents.
+            \item Devised sanity-checks to detect ``silent failures'' during model training. 
+            \item Devised different stratifications for validating models, as well as validating specific data slices. 
+            \item Enabled observability across pipelines (\texttt{Cloudwatch, Slackbots, UMAP, Sentry}). Reviewed metrics weekly to prevent customer-impacting incidents. Periodically reported the unit-economics of our labeling rates (\texttt{Jupyter}).
             \item Led initiative to automate all workflows (\texttt{custom orchestrator}). Later, reimplemented as serverless to improve reliability and cost (\texttt{Step Functions, API Gateway, $\lambda$, EventBridge}).
             \item Enforced code quality and correctness using pre-commit hooks, CI (\texttt{Bitbucket Pipelines}), ML sanity checks, property-based testing (\texttt{Hypothesis}), run-time validation (\texttt{Pandera}), design-by-contract (\texttt{beartype}).
         \end{itemize}
-        %\item Member of council that strategized company re-org to enable internally-led disruption of our business model.
-        \item Set strategic vision for data-centric ML (aka ``data obsessed'').
-        \begin{itemize}
-            \item Key strategist for company-wide transformation from a services company to a product-based ML company using the ``Zone to Win'' framework.
-            \item Created custom data augmentations to enable model to ignore irrelevant visual features.
-            \item Periodically reported the unit-economics of our labeling rates and strategized an overhaul of our data collection process (\texttt{Jupyter}).
-            \item Set business and system requirements, and system design for data collection process (\texttt{C4 diagrams}). Headed tooling overhaul. Point-person for external vendor assessment and selection.
-            \item Pioneered custom techniques and tools for:
-            \begin{itemize}
-                \item data pruning to enable pareto-optimal (exponential) model scaling laws.
-                \item active learning methodology to systematically harvest ``high-leverage'' data.
-                \item few-shot learning to enable rapid bootstrapping in novel biomes.
-            \end{itemize}
-            \item Oversaw ML data collection team, developed rule-sets for data labeling and trained data annotation supervisor.
-            \item Devised annotation QA and QC workflows: systematically identifying mislabeled and/or partially labeled samples (\texttt{custom}).
-        \end{itemize}
-
-        %\item Managed and mentored junior machine learning engineer with in-depth code reviews.
 
     \end{itemize}
 
 
-    \ressubheading{Lead Data Scientist}{Fully Remote}{PaceMate\textsuperscript{TM}}{Jan. 2019 --- Dec. 2019}
+    \ressubheading{Lead Data Scientist}{Remote}{\href{https://pacemate.com/}{PaceMate}}{Jan. 2019 --- Dec. 2019}
 
-    \vspace{-6pt} Founded ML division. Built end-to-end data processing and model training pipelines.
+    \vspace{-6pt} \textit{Pacemate monitors transmissions with bluetooth-enabled heart implants, identifying life-threatening arrhythmias and alerting emergency services}. Founded ML division. Built end-to-end data processing and model training pipelines.
 
     \begin{itemize}
 
@@ -246,14 +229,14 @@
 
 
         \item Upheld SOC2 security standards with measures such as encryption at rest, traffic tunnelling, and instance hardening.
-        \item Presented to various senior stakeholders such as CEO, CTO, and CIO. Interviewed by potential investors.
+        \item Presented to the C-suite and met with potential investors.
 
     \end{itemize}
 
 
-    \ressubheading{Data Scientist}{Sarasota, FL}{New College of FL, F.A.R. Institute}{Aug. 2018 --- Dec. 2018}
+    \ressubheading{Data Scientist}{Sarasota, FL}{New College of FL, \href{farinstitute.org}{F.A.R. Institute}}{Aug. 2018 --- Dec. 2018}
 
-    \vspace{-6pt} Semester-long master's capstone project supervised by Dr. McDonald in partnership with the Florence A. Rothman Institute. Unpaid.
+    \vspace{-6pt} \textit{The Florence A. Rothman Institute supports innovation in medical data analysis}. Semester-long master's capstone project supervised by Dr. Pat McDonald. Unpaid.
 
 
     \begin{itemize}
@@ -275,29 +258,28 @@
 
     \end{itemize}
 
-    \ressubheading{Research Intern}{Seattle, WA}{Peng Lab, Allen Institute for Brain Science}{June 2018 --- Aug. 2018}
+    \ressubheading{Research Intern}{Seattle, WA}{Peng Lab, \href{alleninstitute.org}{Allen Institute for Brain Science}}{June 2018 --- Aug. 2018}
 
-    \vspace{-6pt} Summer research project wherein I proposed a method that would automate the biggest bottleneck to high-throughput neural cell morphological analysis.
+    \vspace{-6pt} \textit{The neuromorphology lab investigates the architecture of the brain at the population and single-cell level}. Proposed a method that would automate the biggest bottleneck to high-throughput neural cell morphological analysis.
 
     \begin{itemize}
         \item Deep reinforcement learning for tracing neural structures in petabytes of noisy fluorescent microscope data.
 
         \begin{itemize}
-            \item Implemented proof-of-concept Deep Q Network using 3D convolutions to trace neural cell structures (\texttt{TensorFlow}).
-            \item Generated and augmented training data from manually traced microscopy dataset.
-            \item Created simulation environment for and engineered reward signals for training agents (\texttt{Matplotlib, OpenAI Gym}).
-            \item Contributor to \texttt{rl-medical}, a \texttt{tensorpack} extension for anatomical landmark detection.
+            \item Implemented proof-of-concept Deep Q Network using 3D convolutions to trace neural cell structures (\texttt{TensorFlow, rl-medical}).
+            \item Created simulation environment and reward system for training agents (\texttt{Matplotlib, OpenAI Gym}) based on \href{https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-019-11443-y/MediaObjects/41467_2019_11443_MOESM4_ESM.mp4}{manually traced microscope images}.
+
         \end{itemize}
 
     \end{itemize}
 
-    \ressubheading{Classroom Mentor}{Fully Remote}{Udacity}{Dec. 2017 --- May 2018}
+    \ressubheading{Classroom Mentor}{Remote}{\href{udacity.com}{Udacity}}{Dec. 2017 --- May 2018}
 
-    Provided 1-on-1 guidance and project code reviews for the \textit{Intro to Programming Nanodegree: Python for Data Analysis Track}.\\
+    Provided 1-on-1 tutoring and code reviews for the \textit{Intro to Programming Nanodegree: Python for Data Analysis Track}.\\
 
-    \ressubheading{Research Assistant}{Seattle, WA}{Fairhall Lab, University of Washington}{Oct. 2014 --- Jan. 2016}
+    \ressubheading{Research Assistant}{Seattle, WA}{\href{https://compneuro.washington.edu/}{Fairhall Lab, University of Washington}}{Oct. 2014 --- Jan. 2016}
 
-    \vspace{-6pt} Developed agent-based dynamical models of mosquito thermal plume navigation behavior.
+    \vspace{-6pt} \textit{Computational neuroscience lab investigating the biophysics of neural cells}. I developed agent-based dynamical models of mosquito thermal plume navigation behavior.
 
     \begin{itemize}
         \item Computed and visualized flight kinematic statistics and thermal sensing statistics using windtunnel flight data (\texttt{Numpy, Seaborn, scipy[interpolate, spatial, stats], sklearn, statsmodels}).
@@ -338,9 +320,9 @@
     \ressubheading{National Institutes of Health PA-12-149 Federal grant}{2014 --- 2016}{Self-funded grant covering my salary and expenses at the UW Dept of Biophysics.}{}
 
 
-    \ressubheading{Florida ``Bright Futures" Scholar}{2007 --- 2011}{Merit-based scholarship, fully covered college tuition.}{}
+    \ressubheading{Florida ``Bright Futures" Scholar}{2007 --- 2011}{Merit-based scholarship; fully covered college tuition.}{}
 
-    \ressubheading{Dubois-Felsmann Research Grant}{2010 --- 2011}{Covered reagent costs for my thesis experiments, conference admission fees, \& travel.}{}
+    \ressubheading{Dubois-Felsmann Research Grant}{2010 --- 2011}{Covered reagent costs for my thesis experiments, and conference admission \& travel.}{}
 
 \end{document}
 
