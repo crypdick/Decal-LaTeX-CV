@@ -1,5 +1,5 @@
 # Decal-LaTeX-CV
-Richard Decal's CV, written in LaTeX
+Ricardo Decal's CV, written in LaTeX
 
 # Requirements
 ```
@@ -25,4 +25,4 @@ credit to Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/to
 
 and me, 
 
-2011 Richard Decal <richard.decal-at-ncf.edu> http://www.richarddecal.com
+2011 Ricardo Decal https://www.richarddecal.com
