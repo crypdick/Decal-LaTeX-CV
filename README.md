@@ -25,4 +25,4 @@ credit to Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/to
 
 and me, 
 
-2011 Ricardo Decal https://www.richarddecal.com
+2011 Ricardo Decal https://www.ricardodecal.com
