@@ -152,16 +152,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \resheading{Machine Learning Experience}
 
-    \ressubheading{Product Manager}{San Francisco, CA}{\href{https://www.anyscale.com/}{Anyscale}}{Jan. 2025 --- Now}
+    \ressubheading{Machine Learning Engineer}{San Francisco, CA}{\href{https://www.anyscale.com/}{Anyscale}}{Jan. 2025 --- Now}
 
-    \vspace{-6pt} Anyscale is a cloud platform for scaling heterogeneous AI workloads. I focus on improving DevEx and building examples that showcase Ray/Anyscale.
+    \vspace{-6pt} Anyscale is a cloud platform for scaling heterogeneous AI workloads. I work on various LLM-related initiatives.
     \begin{itemize}
-    \item	Created quick-start templates for large-scale distributed AI workloads: RL, serving LLMs, distributed training, multimodal models, data curation, agentic workflows, and more.
-    \item   Dogfooding new features in Ray LLM APIs and GPU objects; creating tutorials for new features.
-	\item	Overhauled core docs, tutorials, and vLLM guides to improve onboarding.
-	\item	Designed benchmarks and dashboards to compare performance and cost across Ray OSS and RayTurbo.
-	\item   PoC for "CalibRayTor", a auto-tuning resource allocator for Ray Core.
+    \item   Dogfooded new features in Ray LLM and Ray Direct Transport.
+    \item	Created tutorials for large-scale distributed AI workloads. Examples include post-training LLMs using GRPO, data curation using LLM-as-judge, serving 670B parameter LLMs, multimodal models, agentic workflows.
+    \item	Designed benchmarks to compare performance and cost across Ray OSS and RayTurbo.
+
+	\item   Creating an RL environment and generated data for a Ray Core resource auto-tuning agent.
     \end{itemize}
+    
     \ressubheading{Lead Machine Learning Engineer}{Remote}{\href{dendra.io}{Dendra Systems}}{Feb. 2020 --- Jan. 2025}
 
     \vspace{-6pt} \textit{Dendra uses swarms of seeding drones to restore ecosystems and monitor biodiversity at scale}. Founding ML lead. Full-stack, full life-cycle ML for scalable ecosystem restoration.
@@ -186,10 +187,10 @@
             \item Strategized overhaul of our data collection process to enable ML on long-tailed, open-world inference across thousands of target classes. Set business and system requirements, and system design for strategic labeling workflows (\texttt{PlantUML}).
             \item Implemented active learning methodologies to systematically harvest ``high-leverage'' data, preventing hallucinations on out-of-distribution data.
             \item Implemented novelty-maximizing data pruning to enable pareto-optimal (exponential) model scaling laws. Reduced training data by 60\% while maintaining performance.
-            \item Devised unsupervised ``trip-wires'' for detecting model failures in production. Integrated alerts into project tracker for strategic annotation team so that we can proactively fix the issue (\texttt{Jira}).
+            \item Devised unsupervised ``trip-wires'' for detecting model hallucinations in production. Integrated alerts into project tracker for strategic annotation team so that we can proactively fix the issue (\texttt{Jira}).
             \item Headed data curation tooling initiative (\textit{C4 diagrams}). Point-person for external vendor assessment and selection.
             \item Created ``ML University'' lectures to educate ecologists on ML concepts and labeling best practices for high-quality data. Oversaw ML data collection team, developed rule-sets for data labeling and trained data annotation supervisor.
-            \item Collaborated with ecologists to create model failure reports and gain intuition for model failures. Created data collection campaigns to patch biases in training data.
+            \item Collaborated with ecologists to create model failure reports and gain intuition for model hallucinations. Created data collection campaigns to patch biases in training data.
             \item Devised annotation QA and QC workflows: systematically identifying mislabeled and/or partially labeled samples to create ``self-healing'' training dataset.
         \end{itemize}
         \item Scaling \& Operational Excellence: Architected AWS-native cloud-scale infrastructure.
