@@ -125,7 +125,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \resheading{Profile}
 
-    Senior ML engineer with 10 years across academia and industry. Career arc spans wet-lab biology, computational neuroscience, and production ML. Track record owning end-to-end ML work: data engines for long-tailed open-world inference, distributed training infrastructure on Ray, and ML reliability under real-world distribution shift. Currently working on scalable distributed-AI workloads and data curation in the LLM and RL post-training space at Anyscale.\\
+    Senior ML engineer with 10 years across research and industry, including molecular biology, computational neuroscience, and production ML. Track record owning end-to-end ML work: data engines for long-tailed open-world inference, distributed training infrastructure on Ray, and ML reliability under real-world distribution shift. Currently leading \textbf{Ray-bench}, a benchmark and code-RL environment for training coding agents on distributed-systems tasks, at Anyscale.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -150,9 +150,9 @@
     \item Conceived, pitched, and leading \textbf{Ray-bench}: a benchmark for evaluating LLM agents on distributed-systems code (framework translation, Ray code generation from spec, bug fixing, code optimization), paired with \textbf{RayGym}, a sandboxed multi-node execution harness for code-RL post-training. Strategic goal: drive Ray adoption among coding agents by giving model providers a verifiable-rewards benchmark to train on. Currently leading data generation: scraping, LLM-assisted synthesis with rejection sampling, AST-based Ray-API verification, and decontamination against pre-training corpora.
     \item Conceived, pitched, and designing a separate RL environment to train a Ray Core resource auto-calibration model.
     \item Engineered scalable distributed Ray implementations of: GRPO-based RL post-training for LLMs, LLM-as-judge data curation, 670B-parameter LLM serving, multimodal training, and agentic workflows.
-    \item Designed benchmarks comparing performance and cost across Ray OSS and RayTurbo.
-    \item Built agentic systems for automated debugging and codebase-wide standards enforcement.
     \item Early user and feedback partner for Ray LLM and Ray Direct Transport (RDMA-based tensor transfer for disaggregated inference/training); surfaced bugs and informed design.
+    \item Built agentic systems for automated debugging and codebase-wide standards enforcement.
+    \item Designed benchmarks comparing performance and cost across Ray OSS and RayTurbo.
     \end{itemize}
     
     \ressubheading{Lead Machine Learning Engineer}{Remote}{\href{dendra.io}{Dendra Systems}}{Feb. 2020 --- Jan. 2025}
@@ -161,14 +161,11 @@
     \begin{itemize}
         \item \textbf{Data engine for long-tailed, open-world inference across thousands of target classes.}
         \begin{itemize}
-            \item Active learning to systematically harvest high-leverage training data, preventing model hallucinations on out-of-distribution inputs.
             \item 60\% training-data reduction at no performance cost via a novelty-maximizing data-pruning method I developed (original research, unpublished); yielded pareto-optimal (exponential) scaling laws.
+            \item Active learning to systematically harvest high-leverage training data, preventing model hallucinations on out-of-distribution inputs.
             \item Few-shot models paired with an active-learning data-harvesting UI to onboard new classes and domains in hours instead of months (\texttt{Gradio}).
             \item Unsupervised ``trip-wires'' for detecting model hallucinations in production; alerts routed to annotation prioritization workflow (\texttt{Jira}).
             \item Annotation QA/QC: systematically surfaced mislabeled and partially labeled samples to create a ``self-healing'' training dataset.
-            \item Translated SOTA self-supervised learning research into production to improve robustness and reduce labeled-data requirements (\texttt{PyTorch}).
-            \item System design for strategic labeling workflows (\texttt{PlantUML}, \textit{C4 diagrams}); led vendor assessment and selection for data-curation tooling.
-            \item Authored data-collection campaigns to patch training-data biases identified through model failure analysis.
         \end{itemize}
         \item \textbf{Training and inference infrastructure (Ray-native, cloud-scale).}
         \begin{itemize}
@@ -184,7 +181,6 @@
             \item Debugged model failures using interpretability methods (GradCAM, transformer attention maps) and visualization of training dynamics.
             \item Full artifact lineage and reproducibility (\texttt{MetaFlow}).
             \item Observability across pipelines (\texttt{Cloudwatch, Slack bots, UMAP, Sentry}); weekly metric reviews to prevent customer-impacting incidents.
-            \item Code quality enforcement: pre-commit hooks, CI (\texttt{Bitbucket Pipelines}), property-based testing (\texttt{Hypothesis}), runtime validation (\texttt{Pandera}), design-by-contract (\texttt{beartype}).
             \item 80$\times$ acceleration in insights delivery via model-in-the-loop annotation tooling.
         \end{itemize}
         \item \textbf{ML leadership.} Founding ML lead; drove transformation from services to ML-product company. Owned ML roadmap, KPIs, and OKRs aligned with product and operations. ML automation increased throughput and profitability and unlocked new markets. Oversaw data-collection team and ran internal ``ML University'' lectures.
@@ -193,55 +189,39 @@
 
     \ressubheading{Lead Data Scientist}{Remote}{\href{https://pacemate.com/}{PaceMate}}{Jan. 2019 --- Dec. 2019}
 
-    \vspace{-6pt} \textit{PaceMate monitors transmissions from bluetooth-enabled heart implants, identifying life-threatening arrhythmias and alerting emergency services}. Solo ML hire; took cardiac arrhythmia detection from zero to deployed deep-learning system in a regulated, life-critical pipeline --- end-to-end ownership across data, modeling, clinician tooling, and security.
+    \vspace{-6pt} \textit{PaceMate monitors transmissions from bluetooth-enabled heart implants, identifying life-threatening arrhythmias and alerting emergency services}. Solo ML hire; took cardiac arrhythmia detection from zero to deployed deep-learning system in a regulated, life-critical pipeline --- end-to-end ownership across data, modeling, clinician tooling, and SOC2 security.
     \begin{itemize}
         \item Trained SOTA deep neural network for arrhythmia classification, tuned to the implant device used by the majority of patients (\texttt{Keras}).
         \item Built ECG data-processing pipelines for highly imbalanced clinical data (\texttt{imbalanced-learn}, custom tools).
         \item Built clinician-facing labeling and prediction-review dashboard for electrophysiologists (\texttt{Plotly Dash}).
         \item Built EMR analytics dashboard with performant ETL across heterogeneous medical records to enable data-driven decision-making (\texttt{SQL, PySpark, spaCy, Plotly Dash}).
-        \item Upheld SOC2 standards: encryption at rest, traffic tunnelling, instance hardening.
         \item Translated clinical requirements into ML specs with cardiologists; presented to C-suite and met with investors.
     \end{itemize}
 
 
     \ressubheading{Data Scientist}{Sarasota, FL}{New College of FL, \href{farinstitute.org}{F.A.R. Institute}}{Aug. 2018 --- Dec. 2018}
 
-    \vspace{-6pt} \textit{The Florence A. Rothman Institute supports innovation in medical data analysis}. Semester-long master's capstone project supervised by Dr. Pat McDonald. Unpaid.
+    \vspace{-6pt} Master's capstone (unpaid). Predicted 30-day hospital readmission via patient-visit embeddings (\texttt{visit2vec}, t-SNE); modeled chronic-condition trajectories of heart-failure patients with clustering, network graphs, and finite-state models (\texttt{SQL, PySpark, NetworkX, TensorFlow}).\\
 
-
-    \begin{itemize}
-        \item Data-driven prediction of 30-day readmission using visit clustering.
-
-        \begin{itemize}
-            \item \texttt{visit2vec}: reduce high-dimensional patient visit data into low-dimensional embeddings using a technique inspired by \texttt{word2vec} (\texttt{TensorFlow}).
-            \item Explored structure in patient visits data by clustering patient visits using t-SNE\@.
-        \end{itemize}
-
-
-
-        \item Modeled patient trajectories on years of heart failure patients from Sarasota Memorial Hospital.
-        \begin{itemize}
-            \item Clustered patients over time based on cardiac and non-cardiac chronic conditions (\texttt{SQL, Pandas, PySpark}).
-            \item Created network graphs characterizing interactions between multiple chronic conditions and heart failure and their effect on mortality (\texttt{NetworkX})
-            \item Used finite state modeling to quantify interaction between chronic conditions and mortality (\texttt{PySpark, Numpy}).
-        \end{itemize}
-
-    \end{itemize}
+%   [archived original capstone bullets, pre-rewrite]
+%   \textit{The Florence A. Rothman Institute supports innovation in medical data analysis}. Semester-long master's capstone project supervised by Dr. Pat McDonald. Unpaid.
+%   \item Data-driven prediction of 30-day readmission using visit clustering.
+%       \item \texttt{visit2vec}: reduce high-dimensional patient visit data into low-dimensional embeddings using a technique inspired by \texttt{word2vec} (\texttt{TensorFlow}).
+%       \item Explored structure in patient visits data by clustering patient visits using t-SNE.
+%   \item Modeled patient trajectories on years of heart failure patients from Sarasota Memorial Hospital.
+%       \item Clustered patients over time based on cardiac and non-cardiac chronic conditions (\texttt{SQL, Pandas, PySpark}).
+%       \item Created network graphs characterizing interactions between multiple chronic conditions and heart failure and their effect on mortality (\texttt{NetworkX}).
+%       \item Used finite state modeling to quantify interaction between chronic conditions and mortality (\texttt{PySpark, Numpy}).
 
     \ressubheading{Research Intern}{Seattle, WA}{Peng Lab, \href{alleninstitute.org}{Allen Institute for Brain Science}}{June 2018 --- Aug. 2018}
 
-    \vspace{-6pt} \textit{The neuromorphology lab investigates the architecture of the brain at the population and single-cell level}. Proposed a method that would automate the biggest bottleneck to high-throughput neural cell morphological analysis.
+    \vspace{-6pt} Built a 3D Deep Q-Network for tracing neural structures in petabyte-scale fluorescent microscopy; designed the simulation environment and reward system end-to-end based on \href{https://www.nature.com/articles/s41467-019-11443-y}{manually traced microscope images} (\texttt{TensorFlow, rl-medical, OpenAI Gym}; \href{https://www.ricardodecal.com/projects/profundo-an-rl-agent-for-neural-cell-tracing/}{\textit{Profundo} writeup}).\\
 
-    \begin{itemize}
-        \item Deep reinforcement learning for tracing neural structures in petabytes of noisy fluorescent microscope data (\href{https://www.ricardodecal.com/projects/profundo-an-rl-agent-for-neural-cell-tracing/}{\textit{Profundo} writeup}).
-
-        \begin{itemize}
-            \item Implemented proof-of-concept Deep Q Network using 3D convolutions to trace neural cell structures (\texttt{TensorFlow, rl-medical}).
-            \item Created simulation environment and reward system for training agents (\texttt{Matplotlib, OpenAI Gym}) based on \href{https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-019-11443-y/MediaObjects/41467_2019_11443_MOESM4_ESM.mp4}{manually traced microscope images}.
-
-        \end{itemize}
-
-    \end{itemize}
+%   [archived original Allen bullets, pre-rewrite]
+%   \textit{The neuromorphology lab investigates the architecture of the brain at the population and single-cell level}. Proposed a method that would automate the biggest bottleneck to high-throughput neural cell morphological analysis.
+%   \item Deep reinforcement learning for tracing neural structures in petabytes of noisy fluorescent microscope data.
+%       \item Implemented proof-of-concept Deep Q Network using 3D convolutions to trace neural cell structures (\texttt{TensorFlow, rl-medical}).
+%       \item Created simulation environment and reward system for training agents (\texttt{Matplotlib, OpenAI Gym}) based on manually traced microscope images.
 
     % \ressubheading{Classroom Mentor}{Remote}{\href{udacity.com}{Udacity}}{Dec. 2017 --- May 2018}
 
@@ -249,18 +229,21 @@
 
     \ressubheading{Research Assistant}{Seattle, WA}{\href{https://compneuro.washington.edu/}{Fairhall Lab, University of Washington}}{Oct. 2014 --- Jan. 2016}
 
-    \vspace{-6pt} \textit{Computational neuroscience lab investigating the biophysics of neural cells}. I developed agent-based dynamical models of mosquito thermal plume navigation behavior.
-
+    \vspace{-6pt} Computational neuroscience lab. Self-funded via NIH PA-12-149 federal grant.
     \begin{itemize}
-        \item Computed and visualized flight kinematic statistics and thermal sensing statistics using windtunnel flight data (\texttt{Numpy, Seaborn, scipy[interpolate, spatial, stats], sklearn, statsmodels}).
-        \item Formulated biophysical models of mosquito thermonavigation:
-        applied numerical optimization algorithms to fit model to experimental data (\texttt{scipy[optimize], Pandas}).
-        \item Created animations of thermal plume navigation models (\texttt{Matplotlib 3D, MayaVi}).
+        \item Parameter inference: fit biophysical models of mosquito thermonavigation to wind-tunnel behavioral data via numerical optimization (\texttt{scipy.optimize, sklearn, statsmodels}).
+        \item Wrote vectorized \texttt{numpy} routines for high-throughput processing of behavioral video data; computed kinematic and thermal-sensing statistics across the dataset.
     \end{itemize}
+
+%   [archived original Fairhall bullets, pre-rewrite]
+%   \textit{Computational neuroscience lab investigating the biophysics of neural cells}. I developed agent-based dynamical models of mosquito thermal plume navigation behavior.
+%   \item Computed and visualized flight kinematic statistics and thermal sensing statistics using windtunnel flight data (\texttt{Numpy, Seaborn, scipy[interpolate, spatial, stats], sklearn, statsmodels}).
+%   \item Formulated biophysical models of mosquito thermonavigation: applied numerical optimization algorithms to fit model to experimental data (\texttt{scipy[optimize], Pandas}).
+%   \item Created animations of thermal plume navigation models (\texttt{Matplotlib 3D, MayaVi}).
 
     \ressubheading{Molecular Biologist}{Various}{Various}{Pre-2014}
 
-    \vspace{-6pt} Before transitioning to AI/ML, I was a molecular biology researcher. See GScholar for details.\\
+    \vspace{-6pt} Before transitioning to AI/ML, I was a molecular biology researcher. Co-authored peer-reviewed work on Parkinson's disease (mitochondrial dysfunction in dopaminergic neurons; \textit{PNAS} 2012) and Wnt signaling (\textit{Genetics} 2012). Honors thesis on RNA interference mechanisms in \textit{C. elegans}.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \resheading{Education}
@@ -292,7 +275,7 @@
 
     * 2019 Seminar at \textit{Escuela Secundaria Tecnica de Torquinst}: \textit{Intelligencia Artificial}.
 
-    * 2018 Classroom mentor for \textit{Udacity's Intro to Programming Nanodegree: Python for Data Analysis Track} (1-on-1 tutoring, code reviews).
+%   * 2018 Classroom mentor for \textit{Udacity's Intro to Programming Nanodegree: Python for Data Analysis Track} (1-on-1 tutoring, code reviews).
 
     * 2015 UW Outreach: various educational events for students from low socioeconomic backgrounds.
 
@@ -302,12 +285,12 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Selected Awards \& Grants}
-    \ressubheading{National Institutes of Health PA-12-149 Federal grant}{2014 --- 2016}{Self-funded grant covering salary and expenses at the UW Dept.\ of Biophysics.}{}
-
-    \ressubheading{NCF Data Scholar}{2017 --- 2018}{Full tuition waiver for master's program.}{}
-
-    \ressubheading{Florida ``Bright Futures'' Scholar}{2007 --- 2011}{Merit-based scholarship. Full undergraduate tuition.}{}
+%   [archived awards section, pre-rewrite. NIH grant folded into Fairhall entry.]
+%   \resheading{Selected Awards \& Grants}
+%   \ressubheading{National Institutes of Health PA-12-149 Federal grant}{2014 --- 2016}{Self-funded grant covering salary and expenses at the UW Dept.\ of Biophysics.}{}
+%   \ressubheading{NCF Data Scholar}{2017 --- 2018}{Full tuition waiver for master's program.}{}
+%   \ressubheading{Florida ``Bright Futures'' Scholar}{2007 --- 2011}{Merit-based scholarship. Full undergraduate tuition.}{}
+%   \ressubheading{Dubois-Felsmann Research Grant}{2010 --- 2011}{Covered reagent costs for my thesis experiments \& conferences.}{}
 
 \end{document}
 
