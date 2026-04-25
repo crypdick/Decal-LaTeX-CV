@@ -125,16 +125,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \resheading{Profile}
 
-    I'm a self-starting Machine Learning Engineer, proficient in full-lifecycle and 
-    full-stack projects, with 10 years of academic and industry experience.
-    Having founded two ML departments at start-ups, I have a proven record of doing what 
-    it takes to ship useful products: iterating quickly, creating data curation systems, developing 
-    novel and SOTA solutions, architecting ML infrastructure, and scaling to the cloud. 
-    I have a proven record of quickly learning new domains (molecular biologist $\Rightarrow$ computational neuroscientist $\Rightarrow$ ML engineer) and am able to communicate complex technical concepts to all levels.
-
-    \vspace{0.5em} % half space
-
-    Style: 1) orient to customer needs, 2) design from first principles, 3) build in vertical slices.\\
+    Senior ML engineer with 10 years across academia and industry. Career arc spans wet-lab biology, computational neuroscience, and production ML. Track record owning end-to-end ML work: data engines for long-tailed open-world inference, distributed training infrastructure on Ray, and ML reliability under real-world distribution shift. Currently working on scalable distributed-AI workloads and data curation in the LLM and RL post-training space at Anyscale.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,91 +145,62 @@
 
     \ressubheading{Machine Learning Engineer}{San Francisco, CA}{\href{https://www.anyscale.com/}{Anyscale}}{Jan. 2025 --- Now}
 
-    \vspace{-6pt} Anyscale is a cloud platform for scaling heterogeneous AI workloads. I work on various LLM-related initiatives.
+    \vspace{-6pt} Anyscale builds Ray, the open-source distributed compute framework underlying RL post-training, large-scale training, and inference at frontier labs.
     \begin{itemize}
-    \item   Dogfooded new features in Ray LLM and Ray Direct Transport.
-    \item	Created tutorials for large-scale distributed AI workloads. Examples include RL post-training LLMs using GRPO, data curation using LLM-as-judge, serving 670B parameter LLMs, multimodal models, agentic workflows.
-    \item	Created agentic workflows to automate debugging and enforce standards.
-	\item   Created an RL environment to train a Ray Core resource auto-calibration model.
+    \item Conceived, pitched, and leading \textbf{Ray-bench}: a benchmark for evaluating LLM agents on distributed-systems code (framework translation, Ray code generation from spec, bug fixing, code optimization), paired with \textbf{RayGym}, a sandboxed multi-node execution harness for code-RL post-training. Strategic goal: drive Ray adoption among coding agents by giving model providers a verifiable-rewards benchmark to train on. Currently leading data generation: scraping, LLM-assisted synthesis with rejection sampling, AST-based Ray-API verification, and decontamination against pre-training corpora.
+    \item Conceived, pitched, and designing a separate RL environment to train a Ray Core resource auto-calibration model.
+    \item Engineered scalable distributed Ray implementations of: GRPO-based RL post-training for LLMs, LLM-as-judge data curation, 670B-parameter LLM serving, multimodal training, and agentic workflows.
+    \item Designed benchmarks comparing performance and cost across Ray OSS and RayTurbo.
+    \item Built agentic systems for automated debugging and codebase-wide standards enforcement.
+    \item Early user and feedback partner for Ray LLM and Ray Direct Transport (RDMA-based tensor transfer for disaggregated inference/training); surfaced bugs and informed design.
     \end{itemize}
     
     \ressubheading{Lead Machine Learning Engineer}{Remote}{\href{dendra.io}{Dendra Systems}}{Feb. 2020 --- Jan. 2025}
 
-    \vspace{-6pt} \textit{Dendra uses swarms of seeding drones to restore ecosystems and monitor biodiversity at scale}. Founding ML lead. Full-stack, full life-cycle ML for scalable ecosystem restoration.
+    \vspace{-6pt} Founding ML lead. Built end-to-end ML systems for large-scale, long-tailed visual recognition across thousands of classes --- data engine, training infrastructure, evaluation, and serving. Domain: aerial imagery for ecosystem monitoring.
     \begin{itemize}
-        \item Championed transformation from a services company to a ML product company using ``Zone to Win'' framework. My ML solutions have largely automated species identification tasks. This has transformed the business by increasing throughput, increasing profitability, reduced the `cold start' problem with new biomes, enabled us to persue entire new markets.
-        \item Initiative owner: training large computer vision models for species identification.
+        \item \textbf{Data engine for long-tailed, open-world inference across thousands of target classes.}
         \begin{itemize}
-            \item Bootstrapped end-to-end species ID stack: data processing, hyperparameter tournaments, training, evaluation, serving, monitoring.
-            \item Translated state-of-the-art self-supervised learning research into production to improve model robustness and reduce required labeled training data (\texttt{Pytorch}).
-            \item Researched, experimented, and productionized novel ML techniques: models, samplers, optimization functions, etc.
-            \item Developed few-shot learning models paired with an active learning data harvesting UI to automate new species and novel biomes in hours instead of months (\texttt{Gradio}).
-            \item Owner of ML roadmap (aligned with product roadmap \& operations dept.). Established priorities, KPIs, and OKRs.
-            \item Hand-crafted data augmentations to make model robust to irrelevant features.
+            \item Active learning to systematically harvest high-leverage training data, preventing model hallucinations on out-of-distribution inputs.
+            \item 60\% training-data reduction at no performance cost via a novelty-maximizing data-pruning method I developed (original research, unpublished); yielded pareto-optimal (exponential) scaling laws.
+            \item Few-shot models paired with an active-learning data-harvesting UI to onboard new classes and domains in hours instead of months (\texttt{Gradio}).
+            \item Unsupervised ``trip-wires'' for detecting model hallucinations in production; alerts routed to annotation prioritization workflow (\texttt{Jira}).
+            \item Annotation QA/QC: systematically surfaced mislabeled and partially labeled samples to create a ``self-healing'' training dataset.
+            \item Translated SOTA self-supervised learning research into production to improve robustness and reduce labeled-data requirements (\texttt{PyTorch}).
+            \item System design for strategic labeling workflows (\texttt{PlantUML}, \textit{C4 diagrams}); led vendor assessment and selection for data-curation tooling.
+            \item Authored data-collection campaigns to patch training-data biases identified through model failure analysis.
         \end{itemize}
-        \item Integrated species ID models into customer-facing platform and internal tooling.
+        \item \textbf{Training and inference infrastructure (Ray-native, cloud-scale).}
         \begin{itemize}
-            \item Conceived novel model-in-the-loop annotation tooling, accelerating insights delivery by over 80x.
-            \item Devised model performance QC workflows to ensure we satisfy our SLAs.
+            \item Distributed, scale-agnostic infrastructure for training, hyperparameter tuning, and inference (\texttt{Ray/Anyscale, AWS Batch}).
+            \item 20$\times$ training-cost reduction via Bayesian hyperparameter tournaments with aggressive early stopping (\texttt{Ray Tune, HyperOpt, ASHA}).
+            \item Profiled and optimized multi-GPU throughput (\texttt{Grafana}).
+            \item End-to-end automation of training/inference pipelines (\texttt{custom orchestrator}); later re-implemented serverless for reliability and cost (\texttt{Step Functions, API Gateway, $\lambda$, EventBridge}).
+            \item Researched, experimented, and productionized novel ML techniques: models, samplers, optimization functions, augmentations.
         \end{itemize}
-        \item Set strategic vision for ``data obsessed'' ML and spearheaded our ``data engine''.
+        \item \textbf{MLOps and reliability.}
         \begin{itemize}
-            \item Strategized overhaul of our data collection process to enable ML on long-tailed, open-world inference across thousands of target classes. Set business and system requirements, and system design for strategic labeling workflows (\texttt{PlantUML}).
-            \item Implemented active learning methodologies to systematically harvest ``high-leverage'' data, preventing hallucinations on out-of-distribution data.
-            \item Implemented novelty-maximizing data pruning to enable pareto-optimal (exponential) model scaling laws. Reduced training data by 60\% while maintaining performance.
-            \item Devised unsupervised ``trip-wires'' for detecting model hallucinations in production. Integrated alerts into project tracker for strategic annotation team so that we can proactively fix the issue (\texttt{Jira}).
-            \item Headed data curation tooling initiative (\textit{C4 diagrams}). Point-person for external vendor assessment and selection.
-            \item Created ``ML University'' lectures to educate ecologists on ML concepts and labeling best practices for high-quality data. Oversaw ML data collection team, developed rule-sets for data labeling and trained data annotation supervisor.
-            \item Collaborated with ecologists to create model failure reports and gain intuition for model hallucinations. Created data collection campaigns to patch biases in training data.
-            \item Devised annotation QA and QC workflows: systematically identifying mislabeled and/or partially labeled samples to create ``self-healing'' training dataset.
+            \item Sanity checks for detecting silent failures during training; stratified validation across data slices.
+            \item Debugged model failures using interpretability methods (GradCAM, transformer attention maps) and visualization of training dynamics.
+            \item Full artifact lineage and reproducibility (\texttt{MetaFlow}).
+            \item Observability across pipelines (\texttt{Cloudwatch, Slack bots, UMAP, Sentry}); weekly metric reviews to prevent customer-impacting incidents.
+            \item Code quality enforcement: pre-commit hooks, CI (\texttt{Bitbucket Pipelines}), property-based testing (\texttt{Hypothesis}), runtime validation (\texttt{Pandera}), design-by-contract (\texttt{beartype}).
+            \item 80$\times$ acceleration in insights delivery via model-in-the-loop annotation tooling.
         \end{itemize}
-        \item Scaling \& Operational Excellence: Architected AWS-native cloud-scale infrastructure.
-        \begin{itemize}
-            \item Wrote distributed, scale-agnostic infrastructure for training, hyperparameter tuning, and inference (\texttt{Ray/Anyscale, AWS Batch}).
-            \item Implemented Bayesian hyperparameter tournaments which aggressively kill underperforming trials, reducing training costs by 20x (\texttt{Ray Tune, HyperOpt, ASHA}).
-            \item Identified bottlenecks and optimized throughput for multi-GPU jobs (\texttt{Grafana}).
-        \end{itemize}
-        \item MLOps: Championed efforts to implement best practices for ML systems.
-        \begin{itemize}
-            \item Responsible for debugging model failures with paranoid programming, detailed chronicling, model interpretability algorithms (e.g. GradCAM, Transformer patch activiation maps),  and heavy visualization of training dynamics.
-            \item Responsible for full life-cycle of dataset and model artifacts, quality assurance:
-            tracking artifact lineage, parameters for reproducibility (\texttt{MetaFlow}).
-            \item Devised sanity-checks to detect ``silent failures'' during model training. 
-            \item Devised different stratifications for validating models, as well as validating specific data slices. 
-            \item Enabled observability across pipelines (\texttt{Cloudwatch, Slackbots, UMAP, Sentry}). Reviewed metrics weekly to prevent customer-impacting incidents. Periodically reported the unit-economics of our labeling rates (\texttt{Jupyter}).
-            \item Operation Vacation: Led initiative to automate all workflows, including model training (\texttt{custom orchestrator}). Later, reimplemented as serverless to improve reliability and cost (\texttt{Step Functions, API Gateway, $\lambda$, EventBridge}).
-            \item Enforced code quality and correctness using pre-commit hooks, CI (\texttt{Bitbucket Pipelines}), ML sanity checks, property-based testing (\texttt{Hypothesis}), run-time validation (\texttt{Pandera}), design-by-contract (\texttt{beartype}).
-        \end{itemize}
-
+        \item \textbf{ML leadership.} Founding ML lead; drove transformation from services to ML-product company. Owned ML roadmap, KPIs, and OKRs aligned with product and operations. ML automation increased throughput and profitability and unlocked new markets. Oversaw data-collection team and ran internal ``ML University'' lectures.
     \end{itemize}
 
 
     \ressubheading{Lead Data Scientist}{Remote}{\href{https://pacemate.com/}{PaceMate}}{Jan. 2019 --- Dec. 2019}
 
-    \vspace{-6pt} \textit{Pacemate monitors transmissions with bluetooth-enabled heart implants, identifying life-threatening arrhythmias and alerting emergency services}. Founded ML division. Built end-to-end data processing and model training pipelines.
-
+    \vspace{-6pt} \textit{PaceMate monitors transmissions from bluetooth-enabled heart implants, identifying life-threatening arrhythmias and alerting emergency services}. Solo ML hire; took cardiac arrhythmia detection from zero to deployed deep-learning system in a regulated, life-critical pipeline --- end-to-end ownership across data, modeling, clinician tooling, and security.
     \begin{itemize}
-
-        \item  Automated remote detection of cardiac arrhythmias in Internet-enabled heart implants using deep learning.
-        \begin{itemize}
-            \item Developed processing pipelines for ECG data (\texttt{imbalanced-learn}, custom tools).
-            \item Working with cardiologists and software engineers to formulate business requirements (\texttt{YouTrack}).
-            \item Implemented state-of-the-art deep neural network for automated cardiac arrhythmia classification specifically tuned for the device implanted in a majority of our patients (\texttt{Keras}).
-            \item Created data labeling dashboard for electrophysiologists to review model predictions (\texttt{Plotly Dash}).
-        \end{itemize}
-
-        \item Created dashboard to collate, explore, and summarize key insights from our electronic medical records.
-        \begin{itemize}
-            \item Researched ML-assisted techniques for information extraction from extremely heterogeneous documents.
-            \item Wrote and scaled performant ETL pipelines (\texttt{SQL, PySpark, spaCy}).
-            \item Created dashboard to enable easy faceting and querying of EMR records to facilitate data-driven decision-making (\texttt{Plotly Dash}).
-            \item Created a report on our data inventory and trends in our data.
-        \end{itemize}
-
-
-        \item Upheld SOC2 security standards with measures such as encryption at rest, traffic tunnelling, and instance hardening.
-        \item Presented to the C-suite and met with potential investors.
-
+        \item Trained SOTA deep neural network for arrhythmia classification, tuned to the implant device used by the majority of patients (\texttt{Keras}).
+        \item Built ECG data-processing pipelines for highly imbalanced clinical data (\texttt{imbalanced-learn}, custom tools).
+        \item Built clinician-facing labeling and prediction-review dashboard for electrophysiologists (\texttt{Plotly Dash}).
+        \item Built EMR analytics dashboard with performant ETL across heterogeneous medical records to enable data-driven decision-making (\texttt{SQL, PySpark, spaCy, Plotly Dash}).
+        \item Upheld SOC2 standards: encryption at rest, traffic tunnelling, instance hardening.
+        \item Translated clinical requirements into ML specs with cardiologists; presented to C-suite and met with investors.
     \end{itemize}
 
 
@@ -271,7 +233,7 @@
     \vspace{-6pt} \textit{The neuromorphology lab investigates the architecture of the brain at the population and single-cell level}. Proposed a method that would automate the biggest bottleneck to high-throughput neural cell morphological analysis.
 
     \begin{itemize}
-        \item Deep reinforcement learning for tracing neural structures in petabytes of noisy fluorescent microscope data.
+        \item Deep reinforcement learning for tracing neural structures in petabytes of noisy fluorescent microscope data (\href{https://www.ricardodecal.com/projects/profundo-an-rl-agent-for-neural-cell-tracing/}{\textit{Profundo} writeup}).
 
         \begin{itemize}
             \item Implemented proof-of-concept Deep Q Network using 3D convolutions to trace neural cell structures (\texttt{TensorFlow, rl-medical}).
@@ -314,14 +276,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \resheading{Publications, Presentations, \& Teaching}
 
-    * 2025 Various blog posts and tutorials on Ray, LLMs, and ML. Selected examples: \textit{\href{https://www.anyscale.com/blog/deepseek-vllm-ray-google-kubernetes}{Deploy DeepSeek‑R1 with vLLM and Ray Serve on Kubernetes}}, \textit{\href{https://www.anyscale.com/blog/ray-direct-transport-rdma-support-in-ray-core}{Ray Direct Transport RDMA Support in Ray Core}}.
+    * 2025 \textit{\href{https://www.anyscale.com/blog/deepseek-vllm-ray-google-kubernetes}{Deploy DeepSeek-R1 with vLLM and Ray Serve on Kubernetes}} --- end-to-end deployment guide for distributed serving of a 670B-parameter reasoning model.
 
-    * 2025 Speaker at various Ray meetups:
-    \href{https://luma.com/u5p41kte}{Daft+Ray}, vLLM+Ray, Skypilot+Ray.
+    * 2025 \textit{\href{https://www.anyscale.com/blog/ray-direct-transport-rdma-support-in-ray-core}{Ray Direct Transport: RDMA Support in Ray Core}} --- technical write-up on RDMA-based tensor transfer for disaggregated inference/training.
+
+    * ongoing \href{https://www.ricardodecal.com}{Personal blog} (80+ technical notes on Ray, LLMs, RL, ML internals, OSS projects). Selected: \textit{\href{https://www.ricardodecal.com/projects/self-authoring-llm-knowledge-base/}{Self-authoring LLM knowledge base}}, \textit{\href{https://www.ricardodecal.com/guides/using-ds-py-with-ray-data/}{Using DSPy with Ray Data}}, \textit{\href{https://www.ricardodecal.com/projects/slouchless-using-ai-to-improve-my-posture/}{Slouchless: VLM for posture correction}}.
+
+    * 2025 Speaker at Ray meetups: \href{https://luma.com/u5p41kte}{Daft+Ray}, vLLM+Ray, Skypilot+Ray.
 
     * 2024 Talk at \textit{AI In Production Conference} on \href{https://www.aiinproduction.com/speakers/richard_decal}{data curation}.
 
-    * 2021 Invited talk \textit{Ray Summit}: \href{https://www.anyscale.com/events/2021/06/22/how-ray-and-anyscale-make-it-easy-to-do-massive-scale-ml-on-aerial-imagery}{\textit{How Ray and Anyscale Make it Easy to do Massive-scale ML on Aerial Imagery}}. Accompanying blog post \href{https://www.anyscale.com/blog/how-ray-and-anyscale-make-it-easy-to-do-massive-scale-machine-learning-on}{here}.
+    * 2021 Invited talk at \textit{Ray Summit}: \href{https://www.anyscale.com/events/2021/06/22/how-ray-and-anyscale-make-it-easy-to-do-massive-scale-ml-on-aerial-imagery}{\textit{How Ray and Anyscale Make it Easy to do Massive-scale ML on Aerial Imagery}} (\href{https://www.anyscale.com/blog/how-ray-and-anyscale-make-it-easy-to-do-massive-scale-machine-learning-on}{accompanying blog}).
 
     * 2019 Seminar at \textit{New College of FL}: \textit{Remote Sensing of Cardiac Arrhythmia at Scale using Deep Learning}.
 
@@ -338,14 +303,11 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \resheading{Selected Awards \& Grants}
+    \ressubheading{National Institutes of Health PA-12-149 Federal grant}{2014 --- 2016}{Self-funded grant covering salary and expenses at the UW Dept.\ of Biophysics.}{}
+
     \ressubheading{NCF Data Scholar}{2017 --- 2018}{Full tuition waiver for master's program.}{}
 
-    \ressubheading{National Institutes of Health PA-12-149 Federal grant}{2014 --- 2016}{Self-funded grant covering my salary and expenses at the UW Dept of Biophysics.}{}
-
-
-    \ressubheading{Florida ``Bright Futures" Scholar}{2007 --- 2011}{Merit-based scholarship. Full tuition.}{}
-
-    \ressubheading{Dubois-Felsmann Research Grant}{2010 --- 2011}{Covered reagent costs for my thesis experiments \& conferences.}{}
+    \ressubheading{Florida ``Bright Futures'' Scholar}{2007 --- 2011}{Merit-based scholarship. Full undergraduate tuition.}{}
 
 \end{document}
 
